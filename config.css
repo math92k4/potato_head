@@ -65,6 +65,12 @@ h3 {
   height: 20px;
   background-image: url("imgs/arrow.svg");
   margin-right: 20px;
+
+  transition: 1s;
+}
+
+#configurator .arrow.turned {
+  transform: rotate(90deg);
 }
 
 #configurator .category {
@@ -75,10 +81,11 @@ h3 {
   height: 0px;
   overflow: hidden;
   transition: all 1s;
+  border-bottom: 3px solid #151515;
 }
 
 #configurator .dropdown.show {
-  height: 100px;
+  height: calc(var(--height_on_show) + 10px);
 }
 
 #configurator .options {
