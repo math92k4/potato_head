@@ -9,6 +9,15 @@
   box-sizing: border-box;
 }
 
+p,
+h3 {
+  font-family: "Courier New", Courier, monospace;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
 /*
  *
  *
@@ -37,9 +46,44 @@
   position: absolute;
   width: 90vw;
   height: calc(100vh - 10vw);
-  padding: 10vw;
 
+  top: 5vw;
+  left: 5vw;
+  padding: 10vw 5vw;
   background-color: white;
+  border-radius: 30px;
+}
+
+#configurator .category_btn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+#configurator .arrow {
+  width: 20px;
+  height: 20px;
+  background-image: url("imgs/arrow.svg");
+  margin-right: 20px;
+}
+
+#configurator .category {
+  margin-bottom: 25px;
+}
+
+#configurator .dropdown {
+  height: 0px;
+  display: none;
+}
+
+#configurator .options {
+  display: flex;
+}
+
+#configurator .options img {
+  width: 20vw;
+  border: 1px solid black;
+  margin-right: 10vw;
 }
 
 /*
