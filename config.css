@@ -73,7 +73,12 @@ h3 {
 
 #configurator .dropdown {
   height: 0px;
-  display: none;
+  overflow: hidden;
+  transition: all 1s;
+}
+
+#configurator .dropdown.show {
+  height: 100px;
 }
 
 #configurator .options {
