@@ -31,6 +31,7 @@ h3 {
   background-size: cover;
   background-position: center bottom;
   position: relative;
+  overflow: hidden;
 }
 
 #configurator #character {
@@ -46,8 +47,9 @@ h3 {
   position: absolute;
   top: 7vw;
   right: 7vw;
-
   z-index: 2;
+
+  cursor: pointer;
 }
 
 #toggle_options_menu #icon {
@@ -55,6 +57,11 @@ h3 {
   height: 40px;
   background-image: url("imgs/options_toggle.svg");
   background-size: cover;
+  transition: 1s cubic-bezier(0.58, -0.27, 0.16, 1);
+}
+
+#toggle_options_menu #icon.x_icon {
+  transform: rotate(405deg);
 }
 
 #configurator #elements_container {
@@ -66,11 +73,11 @@ h3 {
   padding: 10vw 5vw;
   background-color: white;
   border-radius: 30px;
-  transition: 1s;
+  transition: 1s cubic-bezier(0.58, -0.27, 0.16, 1);
 }
 
 #configurator #elements_container.hide {
-  opacity: 0;
+  transform: translateX(100vw);
 }
 
 #configurator .category_btn {
@@ -85,7 +92,7 @@ h3 {
   background-image: url("imgs/arrow.svg");
   margin-right: 20px;
 
-  transition: 1s;
+  transition: 1s cubic-bezier(0.49, -0.01, 0.03, 1.02);
 }
 
 #configurator .arrow.turned {
@@ -99,7 +106,7 @@ h3 {
 #configurator .dropdown {
   height: 0px;
   overflow: hidden;
-  transition: all 1s;
+  transition: all 1s cubic-bezier(0.49, -0.01, 0.03, 1.02);
   border-bottom: 3px solid #151515;
 }
 

@@ -4,12 +4,19 @@ export function optionsMenuSetUp() {
   const allDropdowns = document.querySelectorAll(".dropdown");
   allDropdowns.forEach(setInnerHeightProperty);
 
+  document.querySelector("#toggle_options_menu").addEventListener("click", toggleOptionsMenu);
+
   const categories = document.querySelectorAll(".category_btn");
   categories.forEach((category) => {
     category.addEventListener("click", catergoryClicked);
   });
 }
 
+/*
+ *
+ *
+ * setInnerHeightProperty
+ */
 function setInnerHeightProperty(dropdown) {
   const pHeight = dropdown.querySelector("p").offsetHeight;
   const optionsHeigt = dropdown.querySelector(".options").offsetHeight;
@@ -18,6 +25,22 @@ function setInnerHeightProperty(dropdown) {
   dropdown.style.setProperty("--height_on_show", height);
 }
 
+/*
+ *
+ *
+ * catergoryClicked
+ */
+function toggleOptionsMenu() {
+  this.querySelector("#icon").classList.toggle("x_icon");
+  document.querySelector("#elements_container").classList.toggle("hide");
+  console.log("works");
+}
+
+/*
+ *
+ *
+ * catergoryClicked
+ */
 function catergoryClicked() {
   const selectedDropdown = this.nextElementSibling;
   const selectedArrow = this.querySelector(".arrow");
