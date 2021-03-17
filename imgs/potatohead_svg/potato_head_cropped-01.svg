@@ -8,12 +8,12 @@
   <image id="body_shadow" data-shadow="body" width="295" height="46" transform="translate(128.5 510.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped4.png"/>
  </g>
   
-  <g id="mrs_ears" class="hide" data-type="ears">
+  <g id="ms_ears" class="hide" data-type="ears">
   <image id="big_ears_left" width="95" height="136" transform="translate(138.5 138.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped5.png"/>
   <image id="big_ears_right" width="105" height="134" transform="translate(473.5 118.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped6.png"/>
   </g>
 
-   <g id="ms_ears" class="hide" data-type="ears">
+   <g id="mr_ears" class="hide" data-type="ears">
     <image id="right_ear" width="78" height="126" transform="translate(153.5 144.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped14.png"/>
     <image id="left_ear" width="84" height="123" transform="translate(481.5 132.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped15.png"/>
   </g>

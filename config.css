@@ -33,6 +33,15 @@
   bottom: 5vw;
 }
 
+#configurator #elements_container {
+  position: absolute;
+  width: 90vw;
+  height: calc(100vh - 10vw);
+  padding: 10vw;
+
+  background-color: white;
+}
+
 /*
  *
  *
