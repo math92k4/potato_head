@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#configurator section {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("imgs/background.jpeg");
+  background-size: cover;
+  background-position: center bottom;
+}
