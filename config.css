@@ -1,8 +1,19 @@
+/*
+ *
+ *
+ * General
+ */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/*
+ *
+ *
+ * Configurator.html
+ */
 
 #configurator section {
   width: 100vw;
@@ -14,14 +25,19 @@
 }
 
 #configurator #character {
-  width: 90vw;
-  height: 90vw;
-
   /*mobile settings*/
   position: absolute;
+  width: 90vw;
+  height: 90vw;
   left: 5vw;
   bottom: 5vw;
 }
+
+/*
+ *
+ *
+ * Potato SVG
+ */
 
 #potato_svg .hide {
   display: none;
