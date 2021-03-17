@@ -55,6 +55,31 @@
           <div class="options"></div>
         </div>
       </div>
+
+      <script>
+        "use strict";
+        window.addEventListener("DOMContentLoaded", init);
+
+        async function init() {
+          const url = "imgs/potatohead_svg/potato_head_cropped-01.svg";
+          const callback = displaySvg;
+          const object = document.querySelector("#character");
+
+          loadSvg(url, callback, object);
+        }
+
+        // TODO: make this return instead of callback function
+        async function loadSvg(url, callback, object) {
+          const response = await fetch(url);
+          const svgData = await response.text();
+
+          callback(svgData, object);
+        }
+
+        function displaySvg(svgData, object) {
+          object.innerHTML = svgData;
+        }
+      </script>
     </section>
   </body>
 </html>
