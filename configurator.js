@@ -3,6 +3,7 @@
 //imports
 import { loadSvg } from "./fetch_svg.js";
 import { optionsMenuSetUp } from "./options_menu.js";
+import { toggleOption } from "./item_selected.js";
 
 window.addEventListener("DOMContentLoaded", init);
 
@@ -14,4 +15,9 @@ async function init() {
 
   //functinality for clicking the categories
   optionsMenuSetUp();
+
+  const options = document.querySelectorAll("#elements_container img");
+  options.forEach((option) => {
+    option.addEventListener("click", toggleOption);
+  });
 }
