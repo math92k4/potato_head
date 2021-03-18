@@ -21,19 +21,6 @@ export function toggleOption(event) {
   const target = event.currentTarget;
   const option = target.dataset.name;
   const optionCategory = target.dataset.type;
-  const selectedElement = document.querySelector(`#character [data-name=${option}`);
-  const categoryElements = document.querySelectorAll(`#character [data-type=${optionCategory}`);
-  const isShown = checkClassListFor(selectedElement, "show");
-
-  if (isShown) {
-    selectedElement.classList = "hide";
-  } else {
-    categoryElements.forEach((element) => {
-      element.classList = "hide";
-    });
-
-    selectedElement.classList.add("show");
-  }
 
   console.log(option);
 
@@ -54,19 +41,15 @@ export function toggleOption(event) {
   
   const selectedFeature = document.querySelectorAll(`#character [data-name=${option}]`);
   if (features[option]) {
-    document.querySelectorAll(`#character [data-type=${optionCategory}]`).forEach(type => {
+      document.querySelectorAll(`#character [data-type=${optionCategory}]`).forEach(type => {
       type.classList.add("hide");
     })
     selectedFeature.forEach(feature => {
       feature.classList.remove("hide");
     })
   } else {
-    selectedFeature.forEach(feature => {
+      selectedFeature.forEach(feature => {
       feature.classList.add("hide");
     })
-    }
+  }
 }
-
-  
-  
-
