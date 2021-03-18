@@ -17,24 +17,41 @@ const features = {
   ms_shoes: false
 }
 
-
 export function toggleOption(event) {
   const target = event.currentTarget;
   const option = target.dataset.name;
   const optionCategory = target.dataset.type;
 
-  console.log(optionCategory);
+  console.log(option);
 
   if (features[option]) {
     features[option] = false;
+    //console.log(features[option]);
   } else {
-    features[option] = true;
-    document.querySelectorAll(`[data-type=${optionCategory}`).forEach(type => {
-      type.dataset.name = false;
+    document.querySelectorAll(`#elements_container [data-type=${optionCategory}`).forEach(type => {
+      //console.log(type);
+      features[type.dataset.name] = false;
+      // console.log(features[type.dataset.name]);
     })
-    
-    features[optionCategory]
+    features[option] = true;
+
+    // console.log(features[option]);
   }
-  console.log(features[option]);
+  console.log(features);
+  
+  const selectedFeature = document.querySelectorAll(`#character [data-name=${option}]`);
+  if (features[option]) {
+    document.querySelectorAll(`#character [data-type=${optionCategory}]`).forEach(type => {
+      type.classList.add("hide");
+    })
+    selectedFeature.forEach(feature => {
+      feature.classList.remove("hide");
+    })
+  } else {
+    selectedFeature.forEach(feature => {
+      feature.classList.add("hide");
+    })
+    }
+  
 
 }
