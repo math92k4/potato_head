@@ -1,55 +1,49 @@
 "use strict";
 
-const features = {
-  red_nose: false,
-  dark_nose: false,
-  pale_nose: false,
-  black_hat: false,
-  white_hat: false,
-  arms: false,
-  lips: false,
-  mustache_mouth: false,
-  teeth: false,
-  os_eyes: false,
-  ms_eyes: false,
-  lazy_eyes: false,
-  mr_shoes: false,
-  ms_shoes: false
-}
-
-export function toggleOption(event) {
+export function toggleOptions(event) {
+  //gets datasets from event target
   const target = event.currentTarget;
   const option = target.dataset.name;
   const optionCategory = target.dataset.type;
 
-  console.log(option);
+  //identifies svg-parts, by matching datasets
+  const potatoCategory = document.querySelectorAll(`#character [data-type=${optionCategory}]`);
+  const potatoPart = document.querySelector(`#character [data-name=${option}]`);
 
-  if (features[option]) {
-    features[option] = false;
-    //console.log(features[option]);
-  } else {
-    document.querySelectorAll(`#elements_container [data-type=${optionCategory}`).forEach(type => {
-      //console.log(type);
-      features[type.dataset.name] = false;
-      // console.log(features[type.dataset.name]);
-    })
-    features[option] = true;
+  //checks if svg-part already have .show
+  const isShown = checkClassList(potatoPart, "show");
 
-    // console.log(features[option]);
+  hideAllInCategory(potatoCategory);
+
+  if (!isShown) {
+    showOption(option);
   }
-  console.log(features);
-  
-  const selectedFeature = document.querySelectorAll(`#character [data-name=${option}]`);
-  if (features[option]) {
-      document.querySelectorAll(`#character [data-type=${optionCategory}]`).forEach(type => {
-      type.classList.add("hide");
-    })
-    selectedFeature.forEach(feature => {
-      feature.classList.remove("hide");
-    })
+}
+
+//if classList includes className on element
+function checkClassList(element, className) {
+  if (element.classList.length === 0) {
+    return true;
   } else {
-      selectedFeature.forEach(feature => {
-      feature.classList.add("hide");
-    })
+    return element.classList.contains(className);
   }
+}
+
+//hides all svg parts in the clicked category
+function hideAllInCategory(potatoCategory) {
+  potatoCategory.forEach((option) => {
+    const optionName = option.dataset.name;
+    const allParts = document.querySelectorAll(`#character [data-name=${optionName}]`);
+    allParts.forEach((part) => {
+      part.classList = "hide";
+    });
+  });
+}
+
+//Add .show to clicked option
+function showOption(option) {
+  const allParts = document.querySelectorAll(`#character [data-name=${option}]`);
+  allParts.forEach((part) => {
+    part.classList = "show";
+  });
 }
