@@ -14,4 +14,9 @@ async function init() {
 
   //functinality for clicking the categories
   optionsMenuSetUp();
+
+  const options = document.querySelectorAll("#elements_container img");
+  options.forEach((option) => {
+    option.addEventListener("click", optionClicked);
+  });
 }
