@@ -140,6 +140,10 @@ h3 {
   display: none;
 }
 
+#potato_svg .show {
+  display: block;
+}
+
 #potato_svg #back_shadow {
   opacity: 0.5;
 }

@@ -1,41 +1,24 @@
 "use strict";
 
-const nose = {
-  red_nose: false,
-  dark_nose: false,
-  pale_nose: false,
-};
-
-const hat = {
-  black_hat: false,
-  white_hat: false,
-};
-
-const arms = {
-  arms: false,
-};
-
-const mouth = {
-  lips: false,
-  mustache_mouth: false,
-  teeth: false,
-};
-
-const eyes = {
-  os_eyes: false,
-  ms_eyes: false,
-  lazy_eyes: false,
-};
-
-const shoes = {
-  mr_shoes: false,
-  ms_shoes: false,
-};
-
-export function toggleOption(event) {
+export function toggleOptions(event) {
   const target = event.currentTarget;
   const option = target.dataset.name;
   const optionCategory = target.dataset.type;
+  const selectedElement = document.querySelector(`#character [data-name=${option}`);
+  const categoryElements = document.querySelectorAll(`#character [data-type=${optionCategory}`);
+  const isShown = checkClassListFor(selectedElement, "show");
 
-  console.log(option + "   " + optionCategory);
+  if (isShown) {
+    selectedElement.classList = "hide";
+  } else {
+    categoryElements.forEach((element) => {
+      element.classList = "hide";
+    });
+
+    selectedElement.classList.add("show");
+  }
+}
+
+function checkClassListFor(element, className) {
+  return element.classList.contains(className);
 }
