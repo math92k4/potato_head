@@ -2,9 +2,9 @@
   
 
  <g id="back_shadow">
-  <image id="arms_shadow" class="hide" data-name="arms" data-type="arms" width="128" height="41" transform="translate(81.5 504.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped1.png"/>
-  <image id="ms_shoes_shadow" class="hide" data-name="ms_shoes" width="382" height="131" transform="translate(162.5 519.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped2.png"/>
-  <image id="mr_shoes_shadow" data-name="mr_shoes" width="328" height="156" transform="translate(185.5 539.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped3.png"/>
+  <image id="arms_shadow" class="hide" data-shadow="arms_sd" data-name="arms" data-type="arms" width="128" height="41" transform="translate(81.5 504.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped1.png"/>
+  <image id="ms_shoes_shadow" class="hide" data-shadow="ms_shoes_sd" data-name="ms_shoes" width="382" height="131" transform="translate(162.5 519.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped2.png"/>
+  <image id="mr_shoes_shadow" data-name="mr_shoes" data-shadow="mr_shoes_sd" width="328" height="156" transform="translate(185.5 539.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped3.png"/>
   <image id="body_shadow" data-name="body" width="295" height="46" transform="translate(128.5 510.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped4.png"/>
  </g>
   
@@ -40,8 +40,8 @@
   <image id="body" data-type="body" data-shadow="body" width="329" height="465" transform="translate(208.5 62.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped16.png"/>
 
   <image id="mustache_mouth" class="hide" data-type="mouth" data-name="mustache_mouth" width="303" height="165" transform="translate(223.5 337.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped20.png"/>
-  <image id="teeth" class="hide" data-type="mouth" width="161" height="97" transform="translate(295.5 384.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped22.png"/>
-  <image id="red_lips" class="hide" data-type="mouth" width="232" height="119" transform="translate(265.5 377.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped24.png"/>
+  <image id="teeth" class="hide" data-type="mouth" data-name="teeth" width="161" height="97" transform="translate(295.5 384.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped22.png"/>
+  <image id="red_lips" class="hide" data-type="mouth" data-name="lips" width="232" height="119" transform="translate(265.5 377.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped24.png"/>
 
   <image id="lazy_eyes" class="hide" data-type="eyes" data-name="lazy_eyes"  width="202" height="165" transform="translate(259.5 109.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped30.png"/>
   <image id="ms_eyes" class="hide" data-type="eyes" data-name="ms_eyes" width="208" height="154" transform="translate(257.5 117.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped23.png"/>
