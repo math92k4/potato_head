@@ -5,6 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Potato head</title>
+    <link rel="stylesheet" href="frontpage.css">
   </head>
-  <body></body>
+  <body>
+    <section id="frontpage">
+      <header>
+<h1 id="first" class="hide">mr.</h1>
+<h1 id="second" class="hide"> potatohead</h1>
+<h2 id="third" class="hide">configurator</h2>
+      </header>
+
+<a href="configurator.html" id="button" class="hide"><div id="continue_btn"><h3>Start configurator</h3></div></a>
+
+<div id="character" class="hide"> 
+
+</div>
+
+</section>
+
+<script>
+
+window.addEventListener("DOMContentLoaded", start); 
+
+
+function start () {
+  showFirst();
+}
+
+function showFirst() {
+  document.querySelector("#first").classList.remove("hide"); 
+  setTimeout(showSecond, 700);
+}
+
+function showSecond() {
+  document.querySelector("#second").classList.remove("hide"); 
+  setTimeout(showThird, 700);
+}
+
+function showThird() {
+  document.querySelector("#third").classList.remove("hide"); 
+  setTimeout(showPotato, 1000); 
+}
+
+function showPotato() {
+  document.querySelector("#character").classList.remove("hide"); 
+  document.querySelector("#character").addEventListener("animationend", showBtn);
+}
+
+function showBtn() {
+  document.querySelector("#button").classList.remove("hide"); 
+}
+
+
+
+
+
+
+
+
+
+</script>
+  </body>
+
 </html>

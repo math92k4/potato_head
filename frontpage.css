@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .hide {
+      display: none;
+  }
+
+
+section {
+    background-image: url("imgs/background.jpeg");
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h1 {
+font-family: 'sigmar_oneregular';
+font-size: 4rem;
+-webkit-text-stroke: 1px #0059ad;
+background: -webkit-linear-gradient(90deg, rgba(255,222,128,1) 35%, rgba(255,201,49,1) 100%);
+-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#first {
+    animation-name: first_move_kf;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes first_move_kf {
+    0% {
+        transform: translateX(-100vw);
+    }
+
+    100% {
+        transform: translateX(inherit);
+    }
+}
+
+#second {
+    animation-name: second_move_kf;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes second_move_kf {
+    0% {
+        transform: translateX(200vw);
+    }
+
+    100% {
+        transform: translateX(inherit);
+    }
+}
+
+#third {
+    animation-name: third_move_kf;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes third_move_kf {
+    0% {
+        transform: translateX(-100vw);
+    }
+
+    100% {
+        transform: translateX(inherit);
+    }
+}
+
+h2 {
+    font-family: 'sigmar_oneregular';
+    font-size: 3rem;
+    -webkit-text-stroke: 1px #0059ad;
+background: -webkit-linear-gradient(90deg, rgba(255,222,128,1) 35%, rgba(255,201,49,1) 100%);
+-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@font-face {
+    font-family: 'sigmar_oneregular';
+    src: url('webfontkit-20210319-045951/sigmarone-regular-webfont.woff2') format('woff2'),
+         url('webfontkit-20210319-045951/sigmarone-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+#frontpage #character {
+    background-image: url("imgs/main_body.png");
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 70vw;
+    height: 70vh;
+    left: 15vw;
+    bottom: 5vw;
+    /* animation */
+    animation-name: roll_in_kf;
+    animation-iteration-count: 1;
+    animation-duration: 3s;
+    animation-timing-function: cubic-bezier(.42,-0.3,0,1.57);
+    transform-origin: center;  
+  }
+
+@keyframes roll_in_kf {
+    0% {
+        transform: translateX(-100vw) rotate(720deg);
+    }
+    100% {
+        transform: translateX(inherit) rotate(0deg);
+    }
+}
+
+
+
+  #continue_btn {
+      position: absolute;
+      left: 30vw;
+    bottom: 32vw;
+      z-index: 3;
+      border-radius: 20px;
+      width: 40vw;
+      height: 10vh;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10px;
+      cursor: pointer;
+      color: black;
+      text-decoration: none;
+      animation-name: fade_in_kf;
+      animation-duration: 1s;
+      animation-iteration-count: 1;
+  }
+
+  @keyframes fade_in_kf {
+      0% {
+          opacity: 0;
+      }
+
+      100% {
+          opacity: 100;
+      }
+  }
+
+
+
+
+
+
+
+
