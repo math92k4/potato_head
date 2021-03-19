@@ -147,9 +147,16 @@ h3 {
   }
 
   #configurator .options {
-    overflow-x: scroll;
     scroll-behavior: smooth;
     scroll-snap-type: x proximity;
+    /* Hide the scrollbar */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  /* Hide the scrollbar in Chrome, Safari, Opera */
+  #configurator .options::-webkit-scrollbar {
+    display: none;
   }
 
   #configurator .options figure {
