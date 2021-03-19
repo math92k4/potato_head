@@ -228,6 +228,6 @@ h3 {
     transform: translate(calc(var(--diffX)*1px), calc(var(--diffY)*1px)) rotate(0);
   }
   100% {
-    transform: translate(0, 0) rotate(360deg);
+    transform: translate(0, 0);
   }
 }
