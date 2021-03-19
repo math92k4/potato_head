@@ -187,6 +187,10 @@ h3 {
 }
 
 @media screen and (min-width: 1024px) {
+  #configurator #elements_container {
+    width: 40vw;
+  }
+
   #configurator #character {
     max-width: 614px;
     max-height: 614px;
@@ -223,11 +227,24 @@ h3 {
   /* transform-origin: center center; */
 }
 
+.scale {
+  animation: animate_scale 1s cubic-bezier(0.8, -0.25, 0.15, 1.25);
+}
+
 @keyframes animate_in {
   0% {
-    transform: translate(calc(var(--diffX)*1px), calc(var(--diffY)*1px)) rotate(0);
+    transform: translate(calc(var(--diffX)*1px), calc(var(--diffY)*1px));
   }
   100% {
     transform: translate(0, 0);
+  }
+}
+
+@keyframes animate_scale {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
   }
 }

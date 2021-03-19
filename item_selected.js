@@ -56,9 +56,7 @@ function animateOption(option) {
   console.log(option);
   const allParts = document.querySelectorAll(`#character [data-name=${option}]`);
   allParts.forEach(part => {
-    
-    console.log(part);
-
+    part.classList.remove("animate_out");
     const start = document.querySelector(`#elements_container [data-name=${option}]`).getBoundingClientRect();
     // Find the end position
     const end = part.getBoundingClientRect();
@@ -72,7 +70,6 @@ function animateOption(option) {
     
     // Animate the element
     part.classList.add("animate_in");
-
   })
   //  document.querySelector(`#${option}`).classList.add("animate_in");
   //  part.querySelectorAll(`img`)
