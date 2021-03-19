@@ -3,7 +3,7 @@
  *
  * General
  */
-* {
+ * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -15,7 +15,7 @@ h3 {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 /*
@@ -68,10 +68,10 @@ h3 {
 #configurator #elements_container {
   position: absolute;
   width: 90vw;
-  height: calc(100vh - 10vw);
+  height: calc(100vh - 10vh);
   top: 5vw;
-  left: 5vw;
-  padding: 10vw 5vw;
+  right: 5vw;
+  padding: 5vw 5vw 0;
   background-color: white;
   border-radius: 30px;
   transition: 1s cubic-bezier(0.8, -0.25, 0.15, 1.25);
@@ -129,6 +129,39 @@ h3 {
   border: 1px solid black;
   margin-right: 10vw;
 }
+
+@media screen and (min-width: 768px) {
+  h3 {
+    font-size: 1.5rem;
+  }
+  #configurator #toggle_options_menu {
+    top: 3vw;
+    right: 7vw;
+  }
+
+  #configurator #elements_container {
+    top: 1vw;
+    width: 30vw;
+    height: calc(100vh - 5vh);
+    padding: 4vw 2.5vw 0;
+  }
+
+  #configurator .options {
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x proximity;
+  }
+
+  #configurator .options figure {
+    scroll-snap-align: center;
+  }
+
+  #configurator .options img {
+    width: 10vw;
+    margin-right: 1vw;
+  }
+}
+
 
 /*
  *
