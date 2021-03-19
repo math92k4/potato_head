@@ -47,6 +47,10 @@
     <image id="os_eyes" width="181" height="112" transform="translate(265.5 139.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped17.png"/>
   </g>
 
+ <g class="hide" data-type="mouth" data-name="mustache_mouth">
+    <image id="mustache_mouth" width="303" height="165" transform="translate(223.5 337.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped20.png"/>
+  </g>
+
   <g class="hide" data-type="nose" data-name="dark_nose">
     <image id="dark_nose" width="142" height="144" transform="translate(296.5 230.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped21.png"/>
   </g>
@@ -57,24 +61,21 @@
     <image id="pale_nose" width="137" height="154" transform="translate(301.5 234.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped29.png"/>
   </g>
 
-  <g id="ms_ears" class="hide" data-type="ears" data-name="ms_ears">
-  <image id="big_ears_left" width="95" height="136" transform="translate(138.5 138.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped5.png"/>
-  <image id="big_ears_right" width="105" height="134" transform="translate(473.5 118.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped6.png"/>
-  </g>
-
-   <g id="mr_ears" class="hide" data-type="ears" data-name="mr_ears">
-    <image id="right_ear" width="78" height="126" transform="translate(153.5 144.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped14.png"/>
-    <image id="left_ear" width="84" height="123" transform="translate(481.5 132.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped15.png"/>
-  </g>
-
-  <g class="hide" data-type="mouth" data-name="mustache_mouth">
-    <image id="mustache_mouth" width="303" height="165" transform="translate(223.5 337.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped20.png"/>
-  </g>
   <g class="hide" data-type="mouth" data-name="teeth">
     <image id="teeth" width="161" height="97" transform="translate(295.5 384.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped22.png"/>
   </g>
   <g class="hide" data-type="mouth" data-name="lips">
     <image id="red_lips" width="232" height="119" transform="translate(265.5 377.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped24.png"/>
+  </g>
+
+  <g id="ms_ears" class="hide" data-type="ears" data-name="ms_ears">
+    <image id="big_ears_left" width="95" height="136" transform="translate(138.5 138.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped5.png"/>
+    <image id="big_ears_right" width="105" height="134" transform="translate(473.5 118.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped6.png"/>
+  </g>
+
+   <g id="mr_ears" class="hide" data-type="ears" data-name="mr_ears">
+    <image id="right_ear" width="78" height="126" transform="translate(153.5 144.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped14.png"/>
+    <image id="left_ear" width="84" height="123" transform="translate(481.5 132.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped15.png"/>
   </g>
 
   <g id="arms_hug" class="hide" data-type="arms" data-name="arms">
