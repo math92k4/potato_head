@@ -4,7 +4,7 @@
  <g id="back_shadow">
   <image id="arms_shadow" class="hide" data-shadow="arms_sd" data-name="arms" data-type="arms" width="128" height="41" transform="translate(81.5 504.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped1.png"/>
   <image id="ms_shoes_shadow" class="hide" data-shadow="ms_shoes_sd" data-name="ms_shoes" width="382" height="131" transform="translate(162.5 519.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped2.png"/>
-  <image id="mr_shoes_shadow" data-name="mr_shoes" data-shadow="mr_shoes_sd" width="328" height="156" transform="translate(185.5 539.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped3.png"/>
+  <image id="mr_shoes_shadow" class="hide" data-name="mr_shoes" data-shadow="mr_shoes_sd" width="328" height="156" transform="translate(185.5 539.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped3.png"/>
   <image id="body_shadow" data-name="body" width="295" height="46" transform="translate(128.5 510.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped4.png"/>
  </g>
   
@@ -18,7 +18,7 @@
     <image id="left_ear" width="84" height="123" transform="translate(481.5 132.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped15.png"/>
   </g>
   
-  <g id="mr_shoes" data-type="shoes" data-shadow="mr_shoes" data-name="mr_shoes">
+  <g id="mr_shoes" class="hide" data-type="shoes" data-shadow="mr_shoes" data-name="mr_shoes">
     <image id="mr_shoes_original" width="338" height="183" transform="translate(193.5 512.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped7.png"/>
     <polygon id="mr_shoes_left" points="296.08 515.14 294.96 524.99 293.84 529.68 290.71 531.92 287.13 531.92 283.1 531.92 279.3 531.92 274.82 531.92 270.79 531.92 266.99 531.92 264.3 533.26 260.72 535.95 254.23 539.53 248.19 541.99 244.16 545.79 239.91 551.16 237.45 554.75 235.21 559.22 232.98 562.8 230.51 563.92 226.99 568.25 225.35 571.02 223.34 574.54 222.08 579.06 221.08 582.84 220.45 585.98 219.44 588.24 216.68 590.88 214.79 593.52 214.79 596.54 214.16 598.55 211.52 601.94 207.88 606.09 205.11 609.61 202.72 613.89 200.08 618.29 198.82 622.06 197.69 626.33 197.06 630.11 196.18 634.38 196.18 638.9 196.18 642.68 196.18 645.95 195.56 648.33 193.92 649.84 193.92 652.86 194.8 656.76 196.69 660.65 199.58 664.68 203.85 668.7 209.26 672.22 215.42 675.36 221.96 678 229.63 680.64 236.92 682.28 244.46 683.16 252.63 683.79 260.8 684.29 269.23 684.29 281.17 684.29 292.23 683.66 303.04 681.77 313.48 678.76 324.29 674.11 334.6 667.82 342.27 660.03 346.29 651.98 348.68 643.68 349.81 631.99 349.81 621.68 350.44 614.26 350.44 609.24 345.29 597.04 339.25 585.98 333.97 575.42 329.57 565.74 329.19 558.57 329.32 551.15 329.32 545.37 329.19 539.21 329.57 534.18 330.83 529.91 332.08 526.39 332.59 524.13 332.46 522.37 324.79 520.86 319.01 519.73 312.6 518.47 306.56 517.08 301.28 516.08 297.14 513.82 296.08 515.14" fill="#2491d2"/>
     <polygon id="mr_shoes_right" points="402.9 523.6 402.9 531.02 402.9 537.83 402.9 545.65 402.9 554.48 401.7 562.9 400.5 568.11 397.69 573.52 396.29 576.93 396.29 581.75 392.27 586.56 386.66 592.37 382.16 600.66 379.47 608.73 377.94 615.84 376.59 623.91 375.82 628.72 375.82 633.72 375.82 641.02 375.82 643.9 377.55 651.4 380.24 658.89 385.24 665.62 391.96 672.34 399.07 677.15 408.3 682.14 416.75 685.8 425.79 689.06 434.63 690.99 444.81 692.33 458.39 693.32 471.98 693.32 483.44 693.32 492.9 692.14 506.06 689.14 517.31 684.85 523.54 679.86 528.12 675.01 530.47 669.05 531.17 659.63 530.06 647.57 529.37 638.29 524.51 627.06 518.83 618.19 516.34 614.73 514.95 612.23 515.09 607.38 513.01 604.06 510.66 600.45 510.24 596.02 508.99 590.48 507.19 584.1 502.48 577.86 499.15 573.98 494.17 563.04 490.15 556.11 482.52 549.73 474.21 544.88 469.5 540.86 463.26 538.51 455.08 537.95 446.63 537.12 440.95 535.87 439.43 525.76 439.43 515.5 438.04 513.84 434.71 513.84 431.66 515.23 427.09 516.75 421.41 518.41 414.48 520.08 408.11 520.91 403.67 521.88 402.9 523.6" fill="#2491d2"/>
@@ -39,13 +39,25 @@
   
   <image id="body" data-type="body" data-shadow="body" width="329" height="465" transform="translate(208.5 62.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped16.png"/>
 
-  <image id="mustache_mouth" class="hide" data-type="mouth" data-name="mustache_mouth" width="303" height="165" transform="translate(223.5 337.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped20.png"/>
-  <image id="teeth" class="hide" data-type="mouth" data-name="teeth" width="161" height="97" transform="translate(295.5 384.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped22.png"/>
-  <image id="red_lips" class="hide" data-type="mouth" data-name="lips" width="232" height="119" transform="translate(265.5 377.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped24.png"/>
+  <g class="hide" data-type="mouth" data-name="mustache_mouth">
+    <image id="mustache_mouth" width="303" height="165" transform="translate(223.5 337.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped20.png"/>
+  </g>
+  <g class="hide" data-type="mouth" data-name="teeth">
+    <image id="teeth" width="161" height="97" transform="translate(295.5 384.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped22.png"/>
+  </g>
+  <g class="hide" data-type="mouth" data-name="lips">
+    <image id="red_lips" width="232" height="119" transform="translate(265.5 377.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped24.png"/>
+  </g>
 
-  <image id="lazy_eyes" class="hide" data-type="eyes" data-name="lazy_eyes"  width="202" height="165" transform="translate(259.5 109.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped30.png"/>
-  <image id="ms_eyes" class="hide" data-type="eyes" data-name="ms_eyes" width="208" height="154" transform="translate(257.5 117.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped23.png"/>
-  <image id="os_eyes" class="hide" data-type="eyes" data-name="os_eyes" width="181" height="112" transform="translate(265.5 139.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped17.png"/>
+  <g class="hide" data-type="eyes" data-name="lazy_eyes">
+    <image id="lazy_eyes" width="202" height="165" transform="translate(259.5 109.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped30.png"/>
+  </g>
+  <g class="hide" data-type="eyes" data-name="ms_eyes">
+    <image id="ms_eyes" width="208" height="154" transform="translate(257.5 117.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped23.png"/>
+  </g>
+  <g class="hide" data-type="eyes" data-name="os_eyes">
+    <image id="os_eyes" width="181" height="112" transform="translate(265.5 139.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped17.png"/>
+  </g>
 
   <g id="black_hat" class="hide" data-type="hat" data-name="black_hat">
     <image id="black_hat_undershadow" width="237" height="94" transform="translate(237.5 53.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped18.png"/>
@@ -60,8 +72,13 @@
     <image id="white_hat_shadow" width="307" height="140" transform="translate(195.86 4.44)" opacity="0.58" xlink:href="imgs/potatohead_svg/potato_head_cropped27.png"/>
   </g>
 
-
-  <image id="dark_nose" class="hide" data-type="nose" data-name="dark_nose" width="142" height="144" transform="translate(296.5 230.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped21.png"/>
-  <image id="red_nose" class="hide" data-type="nose" data-name="red_nose" width="158" height="115" transform="translate(290.5 253.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped28.png"/>
-  <image id="pale_nose" class="hide" data-type="nose" data-name="pale_nose" width="137" height="154" transform="translate(301.5 234.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped29.png"/>
+  <g class="hide" data-type="nose" data-name="dark_nose">
+    <image id="dark_nose" width="142" height="144" transform="translate(296.5 230.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped21.png"/>
+  </g>
+  <g class="hide" data-type="nose" data-name="red_nose">
+    <image id="red_nose" width="158" height="115" transform="translate(290.5 253.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped28.png"/>
+  </g>
+  <g class="hide" data-type="nose" data-name="pale_nose">
+    <image id="pale_nose" width="137" height="154" transform="translate(301.5 234.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped29.png"/>
+  </g>
 </svg>
