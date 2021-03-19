@@ -219,7 +219,7 @@ h3 {
  *  Animating the parts
  */
  .animate_in {
-  animation: animate_in 1s linear;
+  animation: animate_in 1s cubic-bezier(0.8, -0.25, 0.15, 1.25);
   /* transform-origin: center center; */
 }
 
