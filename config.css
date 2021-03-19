@@ -53,6 +53,7 @@ h3 {
 }
 
 #toggle_options_menu #icon {
+  display: block;
   width: 40px;
   height: 40px;
   background-image: url("imgs/options_toggle.svg");
@@ -142,6 +143,10 @@ h3 {
     bottom: 0;
   }
 
+  #toggle_options_menu #icon {
+    display: none;
+  }
+
   #configurator #toggle_options_menu {
     top: 3vw;
     right: 7vw;
@@ -152,6 +157,10 @@ h3 {
     width: 30vw;
     height: calc(100vh - 5vh);
     padding: 4vw 2.5vw 0;
+  }
+
+  #configurator #elements_container.hide {
+    transform: translateX(0);
   }
 
   #configurator .options {

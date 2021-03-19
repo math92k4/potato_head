@@ -1,6 +1,9 @@
 "use strict";
 
 export function toggleOptions(event) {
+  document.querySelector("#icon").classList.toggle("x_icon");
+  document.querySelector("#elements_container").classList.toggle("hide");
+
   //gets datasets from event target
   const target = event.currentTarget;
   const option = target.dataset.name;
