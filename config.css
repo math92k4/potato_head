@@ -134,6 +134,13 @@ h3 {
   h3 {
     font-size: 1.5rem;
   }
+
+  #configurator #character {
+    width: 60vw;
+    height: 60vw;
+    left: 1vw;
+  }
+
   #configurator #toggle_options_menu {
     top: 3vw;
     right: 7vw;
@@ -166,6 +173,14 @@ h3 {
   #configurator .options img {
     width: 10vw;
     margin-right: 1vw;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #configurator #character {
+    max-width: 614px;
+    max-height: 614px;
+    left: 5vw;
   }
 }
 
