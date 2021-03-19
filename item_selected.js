@@ -20,6 +20,7 @@ export function toggleOptions(event) {
 
   if (!isShown) {
     showOption(option);
+    animateOption(option);
   }
 }
 
@@ -49,4 +50,31 @@ function showOption(option) {
   allParts.forEach((part) => {
     part.classList = "show";
   });
+}
+
+function animateOption(option) {
+  console.log(option);
+  const allParts = document.querySelectorAll(`#character [data-name=${option}]`);
+  allParts.forEach(part => {
+    
+    console.log(part);
+
+    const start = document.querySelector(`#elements_container [data-name=${option}]`).getBoundingClientRect();
+    // Find the end position
+    const end = part.getBoundingClientRect();
+    // Translate the element to the start position
+    const diffX = start.x - end.x;
+    const diffY = start.y - end.y;
+    const center = "center center";
+    part.style.setProperty("--diffX", diffX);
+    part.style.setProperty("--diffY", diffY);
+    part.style.setProperty("transform-origin", center);
+    
+    // Animate the element
+    part.classList.add("animate_in");
+
+  })
+  //  document.querySelector(`#${option}`).classList.add("animate_in");
+  //  part.querySelectorAll(`img`)
+  
 }
