@@ -40,7 +40,7 @@ h3 {
   width: 90vw;
   height: 90vw;
   left: 5vw;
-  bottom: 5vw;
+  bottom: 1vw;
 }
 
 #configurator #toggle_options_menu {
@@ -139,6 +139,7 @@ h3 {
     width: 60vw;
     height: 60vw;
     left: 1vw;
+    bottom: 0;
   }
 
   #configurator #toggle_options_menu {
