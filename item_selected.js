@@ -1,6 +1,7 @@
 "use strict";
 
 export function toggleOptions(event) {
+  console.log("toggleOption");
   document.querySelector("#icon").classList.toggle("x_icon");
   document.querySelector("#elements_container").classList.toggle("hide");
 
@@ -15,17 +16,45 @@ export function toggleOptions(event) {
 
   //checks if svg-part already have .show
   const isShown = checkClassList(potatoPart, "show");
-
-  hideAllInCategory(potatoCategory);
-
-  if (!isShown) {
-    showOption(option);
-    animateOption(option);
+  if (isShown) {
+    removeThisOption();
+    function removeThisOption() {
+      console.log("removeThisOption: ", potatoPart);
+      potatoPart.classList.remove("animate_in");
+      potatoPart.classList.add("animate_out");
+      potatoPart.addEventListener("animationend", animationEnd);
+        function animationEnd() {
+          potatoPart.removeEventListener("animationend", animationEnd);
+          hideAllInCategory(potatoCategory);
+        }
+    }
+  } else {
+    removePrevObtion();
+    function removePrevObtion(){
+      console.log("removePrevObtion: ", potatoCategory);
+      potatoCategory.forEach(part => {
+        const animated = checkClassList(part, "animate_in");
+        console.log(part);
+        console.log("animated", animated);
+        if (animated) {
+          part.classList.remove("animate_in");
+          part.classList.add("animate_out");
+          part.addEventListener("animationend", animationEnd);
+          function animationEnd() {
+            part.removeEventListener("animationend", animationEnd);
+            hideAllInCategory(potatoCategory);
+          }
+        } 
+      })
+      showOption(option);
+      animateOption(option);
+    } 
   }
 }
 
 //if classList includes className on element
 function checkClassList(element, className) {
+  console.log("checkClassList");
   if (element.classList.length === 0) {
     return true;
   } else {
@@ -35,6 +64,7 @@ function checkClassList(element, className) {
 
 //hides all svg parts in the clicked category
 function hideAllInCategory(potatoCategory) {
+  console.log("hideAllInCategory");
   potatoCategory.forEach((option) => {
     const optionName = option.dataset.name;
     const allParts = document.querySelectorAll(`#character [data-name=${optionName}]`);
@@ -46,6 +76,7 @@ function hideAllInCategory(potatoCategory) {
 
 //Add .show to clicked option
 function showOption(option) {
+  console.log("showOption");
   const allParts = document.querySelectorAll(`#character [data-name=${option}]`);
   allParts.forEach((part) => {
     part.classList = "show";
@@ -53,7 +84,7 @@ function showOption(option) {
 }
 
 function animateOption(option) {
-  console.log(option);
+  console.log("animateOption");
   const allParts = document.querySelectorAll(`#character [data-name=${option}]`);
   allParts.forEach(part => {
     part.classList.remove("animate_out");
@@ -71,7 +102,4 @@ function animateOption(option) {
     // Animate the element
     part.classList.add("animate_in");
   })
-  //  document.querySelector(`#${option}`).classList.add("animate_in");
-  //  part.querySelectorAll(`img`)
-  
 }
