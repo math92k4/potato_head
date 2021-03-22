@@ -3,7 +3,7 @@
  *
  * General
  */
- * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -125,10 +125,40 @@ h3 {
   display: flex;
 }
 
+#potato_svg polygon {
+  fill: var(--svg_color);
+}
+
 #configurator .options img {
   width: 20vw;
   border: 1px solid black;
   margin-right: 10vw;
+}
+
+#configurator #colorselector {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 300px;
+  height: 300px;
+
+  background-color: white;
+
+  display: none;
+
+  z-index: 10;
+}
+
+#configurator #colorselector.show {
+  display: block;
+}
+
+#configurator #colorselector .color_button {
+  width: 40px;
+  height: 40px;
+
+  background-color: var(--color);
 }
 
 @media screen and (min-width: 768px) {
@@ -167,7 +197,7 @@ h3 {
     scroll-behavior: smooth;
     scroll-snap-type: x proximity;
     /* Hide the scrollbar */
-    -ms-overflow-style: none;  /* IE and Edge */
+    -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
 
@@ -198,7 +228,6 @@ h3 {
   }
 }
 
-
 /*
  *
  *
@@ -222,7 +251,7 @@ h3 {
  *
  *  Animating the parts
  */
- .animate_in {
+.animate_in {
   animation: animate_in 1s cubic-bezier(0.8, -0.25, 0.15, 1.25);
   /* transform-origin: center center; */
 }
@@ -233,7 +262,7 @@ h3 {
 
 @keyframes animate_in {
   0% {
-    transform: translate(calc(var(--diffX)*1px), calc(var(--diffY)*1px));
+    transform: translate(calc(var(--diffX) * 1px), calc(var(--diffY) * 1px));
   }
   100% {
     transform: translate(0, 0);
@@ -245,6 +274,6 @@ h3 {
     transform: translate(0, 0);
   }
   100% {
-    transform: translate(calc(var(--diffX)*1px), calc(var(--diffY)*1px));
+    transform: translate(calc(var(--diffX) * 1px), calc(var(--diffY) * 1px));
   }
 }

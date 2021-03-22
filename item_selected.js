@@ -1,13 +1,13 @@
 "use strict";
 
-export function toggleOptions(event) {
+export function toggleOptions(element) {
+  //mobile open/close functionality
   document.querySelector("#icon").classList.toggle("x_icon");
   document.querySelector("#elements_container").classList.toggle("hide");
 
-  //gets datasets from event target
-  const target = event.currentTarget;
-  const option = target.dataset.name;
-  const optionCategory = target.dataset.type;
+  //gets datasets from selected element
+  const option = element.dataset.name;
+  const optionCategory = element.dataset.type;
 
   //identifies svg-parts, by matching datasets
   const potatoCategory = document.querySelectorAll(`#character [data-type=${optionCategory}]`);
@@ -15,6 +15,7 @@ export function toggleOptions(event) {
 
   //checks if svg-part already have .show
   const isShown = checkClassList(potatoPart, "show");
+
   if (isShown) {
     removeThisOption();
     function removeThisOption() {

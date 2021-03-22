@@ -3,6 +3,7 @@
 //imports
 import { loadSvg } from "./fetch_svg.js";
 import { optionsMenuSetUp } from "./options_menu.js";
+import { colorSvg } from "./color_svg.js";
 import { toggleOptions } from "./item_selected.js";
 import { scrollPageBtnClicked } from "./click_to_scroll.js";
 
@@ -17,10 +18,19 @@ async function init() {
   //functinality for clicking the categories
   optionsMenuSetUp();
 
+  //checks if clicked part is colorable
   const options = document.querySelectorAll("#elements_container img");
   options.forEach((option) => {
-    option.addEventListener("click", toggleOptions);
+    option.addEventListener("click", isColorable);
   });
 
   document.querySelector("#scroll_p_btn").addEventListener("click", scrollPageBtnClicked);
+}
+
+function isColorable() {
+  if (this.classList.contains("colorable")) {
+    colorSvg(this);
+  } else {
+    toggleOptions(this);
+  }
 }
