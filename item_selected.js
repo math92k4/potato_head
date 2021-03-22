@@ -64,7 +64,7 @@ function checkClassList(element, className) {
 function showOption(option) {
   const allParts = document.querySelectorAll(`#character [data-name=${option}]`);
   allParts.forEach((part) => {
-    part.classList = "show";
+    part.classList.add("show");
   });
 }
 

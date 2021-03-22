@@ -16,6 +16,9 @@ async function init() {
   //splits string to array by ","
   const arrayOfIds = stringToArray(stringOfIds, ",");
 
+  //get color values - if any
+  const svgColors = arrayOfIds.filter(filterColors);
+
   //for each svgPart, detemerine to show or not
   const allOptionParts = document.querySelectorAll(".hide");
   allOptionParts.forEach((part) => {
@@ -41,7 +44,13 @@ function determineShow(part, arrayOfIds) {
   const partId = part.getAttribute("id");
 
   arrayOfIds.forEach((paramsId) => {
-    if (paramsId === partId) {
+    let idForMatch = paramsId;
+
+    if (paramsId.includes("#")) {
+      const onlyColor = getSvgColor(paramsId);
+      idForMatch = getId();
+    }
+    if (idForMatch === partId) {
       part.classList = "show";
     }
   });
