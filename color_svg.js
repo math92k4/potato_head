@@ -3,6 +3,7 @@
 import { toggleOptions } from "./item_selected.js";
 
 export function colorSvg(element) {
+  const modal = document.querySelector("#colorselector_container");
   const container = document.querySelector("#colorselector");
 
   const colorString = element.dataset.colors;
@@ -11,7 +12,8 @@ export function colorSvg(element) {
   console.log(colorArray);
 
   colorArray.forEach(makeColorBtns);
-  container.classList.add("show");
+
+  modal.classList.add("show");
 
   /*
    *
@@ -32,9 +34,8 @@ export function colorSvg(element) {
   }
 
   function colorSelected() {
-    const selectedColor = this.dataset.hexacode;
-
     const dataName = element.dataset.name;
+    const selectedColor = this.dataset.hexacode;
     const svgPaths = document.querySelectorAll(`#character [data-name=${dataName}] polygon`);
 
     svgPaths.forEach((part) => {
@@ -46,9 +47,7 @@ export function colorSvg(element) {
 
   function closeContainer() {
     container.innerHTML = "";
-    container.classList.remove("show");
-
-    console.log(element);
+    modal.classList.remove("show");
 
     toggleOptions(element);
   }

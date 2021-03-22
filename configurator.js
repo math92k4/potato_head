@@ -21,14 +21,17 @@ async function init() {
   //checks if clicked part is colorable
   const options = document.querySelectorAll("#elements_container img");
   options.forEach((option) => {
-    option.addEventListener("click", isColorable);
+    option.addEventListener("click", toggleOrColor);
   });
 
   document.querySelector("#scroll_p_btn").addEventListener("click", scrollPageBtnClicked);
 }
 
-function isColorable() {
-  if (this.classList.contains("colorable")) {
+function toggleOrColor() {
+  const dataName = this.dataset.name;
+  const svgGroup = document.querySelector(`#character [data-name=${dataName}]`);
+
+  if (this.classList.contains("colorable") && !svgGroup.classList.contains("show")) {
     colorSvg(this);
   } else {
     toggleOptions(this);
