@@ -35,7 +35,6 @@ function checkClassList(element, className) {
 }
 
 function removeThisOption(potatoPart) {
-  const shadow = document.querySelector(`#back_shadow [data-name=${potatoPart.dataset.name}]`);
   hasShadow(potatoPart.dataset.name);
   potatoPart.classList.remove("animate_in");
   potatoPart.classList.add("animate_out");
