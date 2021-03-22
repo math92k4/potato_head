@@ -1,0 +1,12 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080">
+  <defs>
+    <radialGradient id="radial-gradient" cx="1894.606" cy="23.315" r="2135.893" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffd89f" stop-opacity="0.25"/>
+      <stop offset="0.98" stop-color="#a8a8a8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <title>sunny_overlay</title>
+  <g id="overlay">
+    <rect width="1920" height="1080" fill="url(#radial-gradient)"/>
+  </g>
+</svg>
