@@ -17,37 +17,11 @@ export function toggleOptions(element) {
   const isShown = checkClassList(potatoPart, "show");
 
   if (isShown) {
-    removeThisOption();
-    function removeThisOption() {
-      potatoPart.classList.remove("animate_in");
-      potatoPart.classList.add("animate_out");
-      potatoPart.addEventListener("animationend", animationEnd);
-      function animationEnd() {
-        potatoPart.removeEventListener("animationend", animationEnd);
-        potatoPart.classList.remove("show");
-        potatoPart.classList.add("hide");
-      }
-    }
+    removeThisOption(potatoPart);
   } else {
-    removePrevObtion();
-    function removePrevObtion() {
-      // Checks if there is a part of same type, that already has been animated
-      potatoCategory.forEach((part) => {
-        const animated = checkClassList(part, "animate_in");
-        if (animated) {
-          part.classList.remove("animate_in");
-          part.classList.add("animate_out");
-          part.addEventListener("animationend", animationEnd);
-          function animationEnd() {
-            part.removeEventListener("animationend", animationEnd);
-            part.classList.remove("show");
-            part.classList.add("hide");
-          }
-        }
-      });
-      showOption(option);
-      animateOption(option);
-    }
+    removePrevObtion(potatoCategory);
+    showOption(option);
+    animateOption(option);
   }
 }
 
@@ -116,7 +90,7 @@ function showOption(option) {
 }
 
 function animateOption(option) {
-  const allParts = document.querySelectorAll(`#character [data-name=${option}]`);
+  const allParts = document.querySelectorAll(`#potato_parts [data-name=${option}]`);
   allParts.forEach((part) => {
     part.classList.remove("animate_out");
     const start = document.querySelector(`#elements_container [data-name=${option}]`).getBoundingClientRect();
