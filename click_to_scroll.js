@@ -16,9 +16,26 @@ function createStringOfIds(elements) {
   let result = "";
 
   elements.forEach((element) => {
-    result += element.getAttribute("id") + ",";
+    const haveColor = element.classList.contains("colorable");
+    const elmId = element.getAttribute("id");
+
+    if (haveColor) {
+      const hexaCode = getHexaCode(element);
+      result = elmId + hexaCode + ",";
+    } else {
+      result += elmId + ",";
+    }
   });
+
   return result;
+}
+
+function getHexaCode(element) {
+  const path = element.querySelector("polygon");
+  const hexaCode = path.style.getPropertyValue("--svg_color");
+  console.log(hexaCode);
+
+  return hexaCode;
 }
 
 function goToUrlAndParams(url, id) {
