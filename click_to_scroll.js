@@ -2,6 +2,7 @@
 
 export function scrollPageBtnClicked() {
   const shownOptions = getArrayByClassName("#potato_svg", "show");
+  console.log(shownOptions);
   const stringOfIds = createStringOfIds(shownOptions);
   const url = "scroll.html";
   goToUrlAndParams(url, stringOfIds);
@@ -18,14 +19,17 @@ function createStringOfIds(elements) {
   elements.forEach((element) => {
     const haveColor = element.classList.contains("colorable");
     const elmId = element.getAttribute("id");
+    console.log(elmId);
 
     if (haveColor) {
       const hexaCode = getHexaCode(element);
-      result = elmId + "-" + hexaCode + ",";
+      result += elmId + "-" + hexaCode + ",";
     } else {
       result += elmId + ",";
     }
   });
+
+  console.log(result);
 
   return result;
 }
@@ -33,7 +37,6 @@ function createStringOfIds(elements) {
 function getHexaCode(element) {
   const path = element.querySelector("polygon");
   const hexaCode = path.style.getPropertyValue("--svg_color").substring(1);
-  console.log(hexaCode);
 
   return hexaCode;
 }
