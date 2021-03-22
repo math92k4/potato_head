@@ -3,7 +3,7 @@
  *
  * General
  */
-* {
+ * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -15,7 +15,7 @@ h3 {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 /*
@@ -40,7 +40,7 @@ h3 {
   width: 90vw;
   height: 90vw;
   left: 5vw;
-  bottom: 5vw;
+  bottom: 1vw;
 }
 
 #configurator #toggle_options_menu {
@@ -53,6 +53,7 @@ h3 {
 }
 
 #toggle_options_menu #icon {
+  display: block;
   width: 40px;
   height: 40px;
   background-image: url("imgs/options_toggle.svg");
@@ -68,10 +69,10 @@ h3 {
 #configurator #elements_container {
   position: absolute;
   width: 90vw;
-  height: calc(100vh - 10vw);
+  height: calc(100vh - 10vh);
   top: 5vw;
-  left: 5vw;
-  padding: 10vw 5vw;
+  right: 5vw;
+  padding: 5vw 5vw 0;
   background-color: white;
   border-radius: 30px;
   transition: 1s cubic-bezier(0.8, -0.25, 0.15, 1.25);
@@ -130,6 +131,74 @@ h3 {
   margin-right: 10vw;
 }
 
+@media screen and (min-width: 768px) {
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  #configurator #character {
+    width: 60vw;
+    height: 60vw;
+    left: 1vw;
+    bottom: 0;
+  }
+
+  #toggle_options_menu #icon {
+    display: none;
+  }
+
+  #configurator #toggle_options_menu {
+    top: 3vw;
+    right: 7vw;
+  }
+
+  #configurator #elements_container {
+    top: 1vw;
+    width: 30vw;
+    height: calc(100vh - 5vh);
+    padding: 4vw 2.5vw 0;
+  }
+
+  #configurator #elements_container.hide {
+    transform: translateX(0);
+  }
+
+  #configurator .options {
+    scroll-behavior: smooth;
+    scroll-snap-type: x proximity;
+    /* Hide the scrollbar */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  /* Hide the scrollbar in Chrome, Safari, Opera */
+  #configurator .options::-webkit-scrollbar {
+    display: none;
+  }
+
+  #configurator .options figure {
+    scroll-snap-align: center;
+  }
+
+  #configurator .options img {
+    width: 10vw;
+    margin-right: 1vw;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #configurator #elements_container {
+    width: 40vw;
+  }
+
+  #configurator #character {
+    max-width: 614px;
+    max-height: 614px;
+    left: 5vw;
+  }
+}
+
+
 /*
  *
  *
@@ -146,4 +215,36 @@ h3 {
 
 #potato_svg #back_shadow {
   opacity: 0.5;
+}
+
+/*
+ *
+ *
+ *  Animating the parts
+ */
+ .animate_in {
+  animation: animate_in 1s cubic-bezier(0.8, -0.25, 0.15, 1.25);
+  /* transform-origin: center center; */
+}
+
+.animate_out {
+  animation: animate_out 1s cubic-bezier(0.8, -0.25, 0.15, 1.25);
+}
+
+@keyframes animate_in {
+  0% {
+    transform: translate(calc(var(--diffX)*1px), calc(var(--diffY)*1px));
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes animate_out {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(calc(var(--diffX)*1px), calc(var(--diffY)*1px));
+  }
 }

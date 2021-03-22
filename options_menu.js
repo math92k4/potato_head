@@ -3,6 +3,8 @@
 export function optionsMenuSetUp() {
   const allDropdowns = document.querySelectorAll(".dropdown");
   allDropdowns.forEach(setInnerHeightProperty);
+  const allOptions = document.querySelectorAll(`.options`);
+  allOptions.forEach(setOverflowX);
 
   document.querySelector("#toggle_options_menu").addEventListener("click", toggleOptionsMenu);
 
@@ -23,6 +25,20 @@ function setInnerHeightProperty(dropdown) {
   const height = pHeight + optionsHeigt + "px";
 
   dropdown.style.setProperty("--height_on_show", height);
+}
+
+/*
+ *
+ *
+ * setOverflowX
+ */
+function setOverflowX(option) {
+  const childCount = option.childElementCount;
+  if (childCount < 3) {
+    option.style.overflowX = "hidden";
+  } else {
+    option.style.overflowX = "scroll";
+  }
 }
 
 /*
