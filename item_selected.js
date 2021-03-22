@@ -21,17 +21,17 @@ export function toggleOptions(event) {
       potatoPart.classList.remove("animate_in");
       potatoPart.classList.add("animate_out");
       potatoPart.addEventListener("animationend", animationEnd);
-        function animationEnd() {
-          potatoPart.removeEventListener("animationend", animationEnd);
-          potatoPart.classList.remove("show");
-          potatoPart.classList.add("hide");
-        }
+      function animationEnd() {
+        potatoPart.removeEventListener("animationend", animationEnd);
+        potatoPart.classList.remove("show");
+        potatoPart.classList.add("hide");
+      }
     }
   } else {
     removePrevObtion();
-    function removePrevObtion(){
+    function removePrevObtion() {
       // Checks if there is a part of same type, that already has been animated
-      potatoCategory.forEach(part => {
+      potatoCategory.forEach((part) => {
         const animated = checkClassList(part, "animate_in");
         if (animated) {
           part.classList.remove("animate_in");
@@ -42,11 +42,11 @@ export function toggleOptions(event) {
             part.classList.remove("show");
             part.classList.add("hide");
           }
-        } 
-      })
+        }
+      });
       showOption(option);
       animateOption(option);
-    } 
+    }
   }
 }
 
@@ -69,7 +69,7 @@ function showOption(option) {
 
 function animateOption(option) {
   const allParts = document.querySelectorAll(`#character [data-name=${option}]`);
-  allParts.forEach(part => {
+  allParts.forEach((part) => {
     part.classList.remove("animate_out");
     const start = document.querySelector(`#elements_container [data-name=${option}]`).getBoundingClientRect();
     // Find the end position
@@ -79,8 +79,8 @@ function animateOption(option) {
     const diffY = start.y - end.y;
     part.style.setProperty("--diffX", diffX);
     part.style.setProperty("--diffY", diffY);
-    
+
     // Animate the element
     part.classList.add("animate_in");
-  })
+  });
 }
