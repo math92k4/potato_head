@@ -3,23 +3,65 @@
 window.addEventListener("DOMContentLoaded", start); 
 
 
+
+
+
+
+
 function start () {
   showFirst();
 }
 
 function showFirst() {
-  document.querySelector("#first").classList.remove("hide"); 
-  setTimeout(showSecond, 700);
+  const firstText = document.querySelector("#first"); 
+let firstSplit; 
+  firstSplit = firstText.textContent.split(""); 
+  firstText.textContent = null; 
+
+  firstSplit.forEach((letter, index) => {
+    const span = document.createElement("span"); 
+    span.textContent += letter; 
+    firstText.append(span); 
+    span.classList.add("cooltext"); 
+    span.style.setProperty("--delay", index); 
+    firstText.classList.remove("hide"); 
+  });
+
+  setTimeout(showSecond, 500);
 }
 
 function showSecond() {
-  document.querySelector("#second").classList.remove("hide"); 
-  setTimeout(showThird, 700);
+  const secondText = document.querySelector("#second"); 
+let secondSplit; 
+  secondSplit = secondText.textContent.split(""); 
+  secondText.textContent = null; 
+
+  secondSplit.forEach((letter, index) => {
+    const span = document.createElement("span"); 
+    span.textContent += letter; 
+    secondText.append(span); 
+    span.classList.add("cooltextsecond"); 
+    span.style.setProperty("--delay", index); 
+    secondText.classList.remove("hide"); 
+  });
+  setTimeout(showThird, 1200);
 }
 
 function showThird() {
-  document.querySelector("#third").classList.remove("hide"); 
-  setTimeout(showPotato, 400); 
+  const thirdText = document.querySelector("#third"); 
+let thirdSplit; 
+  thirdSplit = thirdText.textContent.split(""); 
+  thirdText.textContent = null; 
+
+  thirdSplit.forEach((letter, index) => {
+    const span = document.createElement("span"); 
+    span.textContent += letter; 
+    thirdText.append(span); 
+    span.classList.add("cooltextthird"); 
+    span.style.setProperty("--delay", index); 
+    thirdText.classList.remove("hide"); 
+  });
+  setTimeout(showPotato, 1000); 
 }
 
 function showPotato() {

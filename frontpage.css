@@ -10,6 +10,10 @@
   box-sizing: border-box;
 }
 
+span {
+  display: inline-block;
+}
+
 .hide {
   display: none;
 }
@@ -36,7 +40,7 @@ header {
 
 /*  */
 
-h1 {
+h1 span {
   /* font-family: "sigmar_oneregular"; */
   text-transform: uppercase;
   font-family: "peace_sansregular";
@@ -48,62 +52,84 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
-#first {
+
+.cooltext {
+  --delay: 1s; 
   animation-name: first_move_kf;
   animation-iteration-count: 1;
   animation-duration: 0.5s;
+  animation-delay: calc(var(--delay) * 0.1s);
   animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
 }
 
 @keyframes first_move_kf {
   0% {
+    opacity: 0;
     transform: translateX(-100vw);
   }
 
   100% {
+    opacity: 1;
     transform: translateX(inherit);
   }
 }
 
 /* "POTATOHEAD" */
 
-#second {
+.cooltextsecond {
+  --delay: 1s; 
   animation-name: second_move_kf;
   animation-iteration-count: 1;
   animation-duration: 0.5s;
+  animation-delay: calc(var(--delay) * 0.1s);
   animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
 }
 
 @keyframes second_move_kf {
   0% {
-    transform: translateX(200vw);
+    opacity: 0;
+    transform: translateX(100vw);
   }
 
   100% {
+    opacity: 1;
     transform: translateX(inherit);
   }
 }
 
-/* "CONFIGURATOR"  */
-
-#third {
+.cooltextthird {
+  --delay: 1s; 
   animation-name: third_move_kf;
   animation-iteration-count: 1;
   animation-duration: 0.5s;
+  animation-delay: calc(var(--delay) * 0.1s);
   animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
 }
 
 @keyframes third_move_kf {
   0% {
+    opacity: 0;
     transform: translateX(-100vw);
   }
 
   100% {
+    opacity: 1;
     transform: translateX(inherit);
   }
 }
 
-h2 {
+
+
+
+
+/* "CONFIGURATOR"  */
+
+
+
+h2 span {
   font-family: "peace_sansregular";
 
   text-transform: uppercase;
@@ -214,13 +240,13 @@ h3 {
     margin-top: 20px;
   }
 
-  h1 {
+  h1 span {
     font-size: 5rem;
     line-height: 90%;
     -webkit-text-stroke: 2.5px #0059ad;
   }
 
-  h2 {
+  h2 span {
     font-size: 3.5rem;
     line-height: 90%;
     -webkit-text-stroke: 2px #0059ad;
