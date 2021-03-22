@@ -1,258 +1,236 @@
 * {
-    margin: 0 auto;
-    box-sizing: border-box;
-  }
+  margin: 0 auto;
+  box-sizing: border-box;
+}
 
-  .hide {
-      display: none;
-  }
+.hide {
+  display: none;
+}
 
-  body {
-      overflow: hidden;
-  }
-
+body {
+  overflow: hidden;
+}
 
 section {
-    background-image: url("imgs/background.jpeg");
-    width: 100vw;
-    height: 100vh;
-    max-width: 2000px;
-    background-size: cover;
+  background-image: url("imgs/background.jpeg");
+  width: 100vw;
+  height: 100vh;
+  max-width: 2000px;
+  background-size: cover;
 }
 
 header {
-    max-width: 90vw;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
+  max-width: 90vw;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /*  */
 
 h1 {
-font-family: 'sigmar_oneregular';
-font-size: 2.5rem;
--webkit-text-stroke: 1px #0059ad;
-background: -webkit-linear-gradient(90deg, rgba(255,222,128,1) 35%, rgba(255,201,49,1) 100%);
--webkit-background-clip: text;
-background-clip: text;
+  font-family: "sigmar_oneregular";
+  font-size: 2.5rem;
+  -webkit-text-stroke: 1px #0059ad;
+  background: -webkit-linear-gradient(90deg, rgba(255, 222, 128, 1) 35%, rgba(255, 201, 49, 1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 #first {
-    animation-name: first_move_kf;
-    animation-iteration-count: 1;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-in-out;
+  animation-name: first_move_kf;
+  animation-iteration-count: 1;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes first_move_kf {
-    0% {
-        transform: translateX(-100vw);
-    }
+  0% {
+    transform: translateX(-100vw);
+  }
 
-    100% {
-        transform: translateX(inherit);
-    }
+  100% {
+    transform: translateX(inherit);
+  }
 }
 
 /* "POTATOHEAD" */
 
 #second {
-    animation-name: second_move_kf;
-    animation-iteration-count: 1;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-in-out;
+  animation-name: second_move_kf;
+  animation-iteration-count: 1;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes second_move_kf {
-    0% {
-        transform: translateX(200vw);
-    }
+  0% {
+    transform: translateX(200vw);
+  }
 
-    100% {
-        transform: translateX(inherit);
-    }
+  100% {
+    transform: translateX(inherit);
+  }
 }
 
 /* "CONFIGURATOR"  */
 
 #third {
-    animation-name: third_move_kf;
-    animation-iteration-count: 1;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-in-out;
+  animation-name: third_move_kf;
+  animation-iteration-count: 1;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes third_move_kf {
-    0% {
-        transform: translateX(-100vw);
-    }
+  0% {
+    transform: translateX(-100vw);
+  }
 
-    100% {
-        transform: translateX(inherit);
-    }
+  100% {
+    transform: translateX(inherit);
+  }
 }
 
 h2 {
-    font-family: 'sigmar_oneregular';
-    font-size: 2rem;
-    -webkit-text-stroke: 1px #0059ad;
-background: -webkit-linear-gradient(90deg, rgba(255,222,128,1) 35%, rgba(255,201,49,1) 100%);
--webkit-background-clip: text;
-background-clip: text;
+  font-family: "sigmar_oneregular";
+  font-size: 2rem;
+  -webkit-text-stroke: 1px #0059ad;
+  background: -webkit-linear-gradient(90deg, rgba(255, 222, 128, 1) 35%, rgba(255, 201, 49, 1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 h3 {
-    font-size: 1.5rem;
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    text-decoration: none;
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  text-decoration: none;
 }
 
 @font-face {
-    font-family: 'sigmar_oneregular';
-    src: url('webfontkit-20210319-045951/sigmarone-regular-webfont.woff2') format('woff2'),
-         url('webfontkit-20210319-045951/sigmarone-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "sigmar_oneregular";
+  src: url("webfontkit-20210319-045951/sigmarone-regular-webfont.woff2") format("woff2"),
+    url("webfontkit-20210319-045951/sigmarone-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
-
 #container {
-    width: 100vw;
-    display: flex;
-    justify-content: center;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
 }
 
 /* POTATO HEAD */
 
-
 #frontpage #character {
-    background-image: url("imgs/main_body.png");
-    top: 20%; 
-    position: absolute;
-    background-repeat: no-repeat;
-    max-width: 350px;
-    width: 350px;
-    height: 500px;
-    margin-top: 5vw;
-    /* animation */
-    animation-name: roll_in_kf;
-    animation-iteration-count: 1;
-    animation-duration: 3s;
-    animation-timing-function: cubic-bezier(.42,-0.3,0,1.57);
-    transform-origin: center;  
-  }
-
-@keyframes roll_in_kf {
-    0% {
-        transform: translateX(-100vw) rotate(720deg);
-    }
-    100% {
-        transform: translateX(0) rotate(0deg);
-    }
+  background-image: url("imgs/main_body.png");
+  top: 20%;
+  position: absolute;
+  background-repeat: no-repeat;
+  max-width: 350px;
+  width: 350px;
+  height: 500px;
+  margin-top: 5vw;
+  /* animation */
+  animation-name: roll_in_kf;
+  animation-iteration-count: 1;
+  animation-duration: 3s;
+  animation-timing-function: cubic-bezier(0.42, -0.3, 0, 1.57);
+  transform-origin: center;
 }
 
+@keyframes roll_in_kf {
+  0% {
+    transform: translateX(-100vw) rotate(720deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+}
 
 /* START CONFIGURATOR BUTTON */
 
-  #continue_btn {
-      position: relative;
-      z-index: 3;
-      border-radius: 20px;
-      top: 60vh; 
-      width: 300px;
-      height: 10vh;
-      background-color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 10px;
-      cursor: pointer;
-      color: black;
-      animation-name: fade_in_kf;
-      animation-duration: 0.8s;
-      animation-iteration-count: 1;
-      animation-timing-function: cubic-bezier(.42,-0.3,0,1.57);
-  }
-
-  @keyframes fade_in_kf {
-      0% {
-          opacity: 0;
-          transform: scale(0);
-      }
-
-      100% {
-          opacity: 100;
-          transform: scale(1);
-      }
-  }
-
-  #frontpage a {
-      text-decoration: none;
-  }
-
-
-
-  @media (min-width: 650px) {
-      header {
-          flex-wrap: nowrap;
-          flex-direction: column;
-          justify-content: center;
-      }
-
-
-      h1 {
-          font-size: 5rem;
-          line-height: 90%;
-      }
-
-      h2 {
-          font-size: 4rem;
-          line-height: 90%;
-      }
-
-      h1, h2 {
-          text-align: center;
-      }
-
-      #container {
-          width: 100vw;
-          height: 100vh;
-          justify-content: center;
-    }
-
-      #frontpage #character {
-        animation-timing-function: cubic-bezier(.42,-0.3,0,1.20);
-    transform-origin: center ;  
-      }
-
-
-@keyframes roll_in_kf {
-    0% {
-        transform: translateX(-100vw) rotate(360deg);
-    }
-    100% {
-        transform: translateX(inherit) rotate(0deg);
-    }
+#continue_btn {
+  position: absolute;
+  z-index: 3;
+  border-radius: 20px;
+  bottom: 10vh;
+  width: 300px;
+  transform: translateX(-50%);
+  height: 65px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  cursor: pointer;
+  color: black;
+  animation-name: fade_in_kf;
+  animation-duration: 0.8s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.42, -0.3, 0, 1.57);
 }
 
-      #continue_btn { 
-          position: relative;
-          top: 45vw; 
-          bottom: 0;  
-          min-width: 300px;
-          max-width: 400px;
-
-      }
+@keyframes fade_in_kf {
+  0% {
+    opacity: 0;
+    transform: scale(0) translateX(-50%);
   }
 
+  100% {
+    opacity: 100;
+    transform: scale(1) translateX(-50%);
+  }
+}
 
+#frontpage a {
+  text-decoration: none;
+}
 
+@media (min-width: 650px) {
+  header {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+  }
 
+  h1 {
+    font-size: 5rem;
+    line-height: 90%;
+  }
 
+  h2 {
+    font-size: 4rem;
+    line-height: 90%;
+  }
 
+  h1,
+  h2 {
+    text-align: center;
+  }
 
+  #container {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+  }
+
+  #frontpage #character {
+    animation-timing-function: cubic-bezier(0.42, -0.3, 0, 1.2);
+    transform-origin: center;
+  }
+
+  @keyframes roll_in_kf {
+    0% {
+      transform: translateX(-100vw) rotate(360deg);
+    }
+    100% {
+      transform: translateX(inherit) rotate(0deg);
+    }
+  }
+}
