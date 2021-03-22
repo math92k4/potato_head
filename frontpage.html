@@ -15,56 +15,16 @@
 <h2 id="third" class="hide">configurator</h2>
       </header>
 
-<a href="configurator.html" id="button" class="hide"><div id="continue_btn"><h3>Start configurator</h3></div></a>
-
+      <div id="container">
 <div id="character" class="hide"> 
-
 </div>
-
+<a href="configurator.html" id="button" class="hide"><div id="continue_btn"><h3>Start configurator</h3></div></a>
+</div>
 </section>
 
-<script>
-
-window.addEventListener("DOMContentLoaded", start); 
+<script src="frontpage.js"></script>
 
 
-function start () {
-  showFirst();
-}
-
-function showFirst() {
-  document.querySelector("#first").classList.remove("hide"); 
-  setTimeout(showSecond, 700);
-}
-
-function showSecond() {
-  document.querySelector("#second").classList.remove("hide"); 
-  setTimeout(showThird, 700);
-}
-
-function showThird() {
-  document.querySelector("#third").classList.remove("hide"); 
-  setTimeout(showPotato, 1000); 
-}
-
-function showPotato() {
-  document.querySelector("#character").classList.remove("hide"); 
-  document.querySelector("#character").addEventListener("animationend", showBtn);
-}
-
-function showBtn() {
-  document.querySelector("#button").classList.remove("hide"); 
-}
-
-
-
-
-
-
-
-
-
-</script>
   </body>
 
 </html>
