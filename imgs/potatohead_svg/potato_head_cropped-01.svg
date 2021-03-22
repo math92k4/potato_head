@@ -3,8 +3,8 @@
 
  <g id="back_shadow">
   <image id="arms_shadow" class="hide" data-shadow="arms_sd" data-name="arms" data-type="arms" width="128" height="41" transform="translate(81.5 504.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped1.png"/>
-  <image id="ms_shoes_shadow" class="hide" data-shadow="ms_shoes_sd" data-name="ms_shoes" width="382" height="131" transform="translate(162.5 519.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped2.png"/>
-  <image id="mr_shoes_shadow" class="hide" data-name="mr_shoes" data-shadow="mr_shoes_sd" width="328" height="156" transform="translate(185.5 539.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped3.png"/>
+  <image id="ms_shoes_shadow" class="hide" data-shadow="ms_shoes_sd" data-name="ms_shoes" data-type="shoes" width="382" height="131" transform="translate(162.5 519.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped2.png"/>
+  <image id="mr_shoes_shadow" class="hide" data-name="mr_shoes" data-shadow="mr_shoes_sd" data-type="shoes" width="328" height="156" transform="translate(185.5 539.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped3.png"/>
   <image id="body_shadow" data-name="body" width="295" height="46" transform="translate(128.5 510.56)" xlink:href="imgs/potatohead_svg/potato_head_cropped4.png"/>
  </g>
 
