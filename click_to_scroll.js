@@ -21,7 +21,7 @@ function createStringOfIds(elements) {
 
     if (haveColor) {
       const hexaCode = getHexaCode(element);
-      result = elmId + hexaCode + ",";
+      result = elmId + "-" + hexaCode + ",";
     } else {
       result += elmId + ",";
     }
@@ -32,7 +32,7 @@ function createStringOfIds(elements) {
 
 function getHexaCode(element) {
   const path = element.querySelector("polygon");
-  const hexaCode = path.style.getPropertyValue("--svg_color");
+  const hexaCode = path.style.getPropertyValue("--svg_color").substring(1);
   console.log(hexaCode);
 
   return hexaCode;

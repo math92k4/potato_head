@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+#scroll polygon {
+  fill: var(--svg_color);
+}
+
 .scroll_block {
   height: 100vh;
 }
