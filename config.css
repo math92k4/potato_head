@@ -61,6 +61,19 @@ h3 {
   height: 90vw;
   left: 5vw;
   bottom: 1vw;
+  animation: move_potato 3s ease-in-out infinite;
+}
+
+@keyframes move_potato {
+  0% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-2deg);
+  }
 }
 
 #configurator #toggle_options_menu {
@@ -237,6 +250,7 @@ h3 {
   top: 0;
   left: 0;
   display: none;
+  background-color: rgba(0,0,0,.5);
 
   z-index: 10;
 }
@@ -248,14 +262,23 @@ h3 {
 }
 
 #configurator #colorselector_content {
-  padding: 20px;
-  background-color: white;
+  padding: 2.5vw 2.5vw;
+  background-color: #efefef;
+  border-radius: 30px;
+  box-shadow: 3px 3px 5px rgba(0,0,0,.5);
+}
+
+#configurator #colorselector {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 1vw;
 }
 
 #configurator #colorselector .color_button {
   width: 40px;
   height: 40px;
   background-color: var(--color);
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
