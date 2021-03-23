@@ -42,16 +42,16 @@ function determineShow(part, arrayOfIds) {
 
   arrayOfIds.forEach((paramsId) => {
     let idForMatch = paramsId;
+    let svgColor = null;
 
     if (idForMatch.includes("-")) {
-      const svgColor = getSvgColor(paramsId);
-      setColor(part, svgColor);
+      svgColor = getSvgColor(paramsId);
       idForMatch = getOnlyId(paramsId);
     }
-    console.log(idForMatch);
 
     if (idForMatch === partId) {
       part.classList = "show";
+      setColor(part, svgColor);
     }
   });
 
