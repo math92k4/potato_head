@@ -66,12 +66,31 @@ let thirdSplit;
 
 function showPotato() {
   document.querySelector("#character").classList.remove("hide"); 
-  document.querySelector("#character").addEventListener("animationend", showBtn);
+  document.querySelector("#character").classList.add("roll_in"); 
+
+  setTimeout(showBtn, 3000); 
+
 }
 
 function showBtn() {
+  document.querySelector("#character").classList.add("wiggle"); 
   document.querySelector("#button").classList.remove("hide"); 
+  setTimeout(flyRight, 2000); 
+
 }
+
+function flyRight () {
+  document.querySelector("#lightyearRight").classList.remove("hide"); 
+  document.querySelector("#lightyearRight").addEventListener("animationend", flyLeft);
+
+}
+
+function flyLeft () {
+  document.querySelector("#lightyearLeft").classList.remove("hide"); 
+  document.querySelector("#lightyearLeft").addEventListener("animationend", flyRight);
+
+}
+
 
 
 

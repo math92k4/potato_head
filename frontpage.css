@@ -121,11 +121,67 @@ h1 span {
   }
 }
 
+#lightyearRight {
+  background-image: url(imgs/right_lightyear.png);
+  background-size: cover;
+  /* width: 30%;
+  height: 25%; */
+  width: 110%;
+  height: 25%;
+  animation-name: flying_right_kf;
+  animation-iteration-count:initial; 
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+#lightyearContainer {
+  width: 100vw;
+  height: 100vh;
+}
+
+@keyframes flying_right_kf {
+  0% {
+    transform: translateX(-100vw);
+  }
+
+  100% {
+    transform: translateX(100vw); 
+  }
+}
+
+#lightyearLeft {
+  --iterations: 1; 
+  background-image: url(imgs/left_lightyear.png);
+  background-size: cover;
+  /* width: 30%;
+  height: 25%; */
+  width: 110%;
+  height: 25%;
+  animation-name: flying_left_kf;
+  animation-iteration-count:1; 
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+#lightyearContainer {
+  width: 100vw;
+  height: 100vh;
+}
+
+@keyframes flying_left_kf {
+  0% {
+    transform: translateX(100vw);
+  }
+
+  100% {
+    transform: translateX(-120vw); 
+  }
+}
 
 
 
-
-/* "CONFIGURATOR"  */
 
 
 
@@ -173,7 +229,9 @@ h3 {
   width: 350px;
   height: 500px;
   margin-top: 5vw;
-  /* animation */
+}
+
+.roll_in {
   animation-name: roll_in_kf;
   animation-iteration-count: 1;
   animation-duration: 3s;
@@ -189,6 +247,41 @@ h3 {
     transform: translateX(0) rotate(0deg);
   }
 }
+
+.wiggle {
+  animation-name: wiggle_kf;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  transform-origin: bottom;
+}
+
+@keyframes wiggle_kf {
+  0% {
+    animation-timing-function: ease-out;
+    transform: rotate(0deg); 
+  }
+
+  25% {
+    animation-timing-function: ease-in;
+    transform: rotate(1.5deg); 
+  }
+
+  50% {
+    animation-timing-function: ease-out;
+    transform: rotate(0deg);
+  }
+
+  75% {
+    animation-timing-function: ease-in;
+    transform: rotate(-1.5deg);
+  }
+
+  100% { 
+    animation-timing-function: ease-out;
+    transform: rotate(0deg);
+  }
+}
+
 
 /* START CONFIGURATOR BUTTON */
 
@@ -213,6 +306,10 @@ h3 {
   animation-timing-function: cubic-bezier(0.42, -0.3, 0, 1.57);
 }
 
+#continue_btn:hover {
+  border: solid black 2px;
+}
+
 @keyframes fade_in_kf {
   0% {
     opacity: 0;
@@ -228,6 +325,8 @@ h3 {
 #frontpage a {
   text-decoration: none;
 }
+
+
 
 @media (min-width: 650px) {
   header {
@@ -266,6 +365,20 @@ h3 {
   #frontpage #character {
     animation-timing-function: cubic-bezier(0.42, -0.3, 0, 1.2);
     transform-origin: center;
+  }
+
+  #lightyearRight {
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    width: 38%;
+  height: 25%;
+  }
+
+  #lightyearLeft {
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    width: 38%;
+  height: 25%;
   }
 
   @keyframes roll_in_kf {
