@@ -196,11 +196,28 @@ h3 {
   fill: var(--svg_color);
 }
 
+#configurator .options {
+  scroll-behavior: smooth;
+  scroll-snap-type: x proximity;
+  /* Hide the scrollbar */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Hide the scrollbar in Chrome, Safari, Opera */
+#configurator .options::-webkit-scrollbar {
+  display: none;
+}
+
+#configurator .options figure {
+  scroll-snap-align: center;
+}
+
 #configurator .options img {
   width: 20vw;
   border-radius: 1rem;
   border: 2px solid #0059ad;
-  margin-right: 10vw;
+  margin-right: 1vw;
 }
 
 #configurator .options img:hover {
@@ -264,26 +281,8 @@ h3 {
     transform: translateX(0);
   }
 
-  #configurator .options {
-    scroll-behavior: smooth;
-    scroll-snap-type: x proximity;
-    /* Hide the scrollbar */
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
-
-  /* Hide the scrollbar in Chrome, Safari, Opera */
-  #configurator .options::-webkit-scrollbar {
-    display: none;
-  }
-
-  #configurator .options figure {
-    scroll-snap-align: center;
-  }
-
   #configurator .options img {
     width: 10vw;
-    margin-right: 1vw;
   }
 }
 
