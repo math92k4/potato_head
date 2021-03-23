@@ -132,14 +132,14 @@ h3 {
 }
 
 #configurator #button_container {
-  width: 100%;
+  flex-basis: 100%;
+  flex-grow: 1;
+  max-width: 450px;
   height: 130px;
   display: flex;
   justify-content: center;
-  align-self: flex-end;
   margin-bottom: 1rem;
   background-image: url(imgs/button_bg.svg);
-  /* background-size: cover; */
   background-size: 70%;
   background-repeat: no-repeat;
   background-position: center;
@@ -283,8 +283,8 @@ h3 {
 
 @media screen and (min-width: 768px) {
   #configurator #character {
-    width: 60vw;
-    height: 60vw;
+    width: 50vw;
+    height: 50vw;
     left: 1vw;
     bottom: 0;
   }
@@ -295,7 +295,7 @@ h3 {
 
   #configurator #elements_container {
     top: 1vw;
-    width: 30vw;
+    width: 40vw;
     height: calc(100vh - 5vh);
     padding: 2.5vw 2.5vw 0;
   }
@@ -310,10 +310,6 @@ h3 {
 }
 
 @media screen and (min-width: 1024px) {
-  #configurator #elements_container {
-    width: 40vw;
-  }
-
   #configurator #character {
     max-width: 614px;
     max-height: 614px;
