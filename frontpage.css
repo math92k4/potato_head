@@ -127,7 +127,7 @@ h1 span {
   /* width: 30%;
   height: 25%; */
   width: 110%;
-  height: 25%;
+  height: 30%;
   animation-name: flying_right_kf;
   animation-iteration-count:initial; 
   animation-duration: 1.5s;
@@ -157,7 +157,7 @@ h1 span {
   /* width: 30%;
   height: 25%; */
   width: 110%;
-  height: 25%;
+  height: 30%;
   animation-name: flying_left_kf;
   animation-iteration-count:1; 
   animation-duration: 1.5s;
@@ -235,7 +235,7 @@ h3 {
   animation-name: roll_in_kf;
   animation-iteration-count: 1;
   animation-duration: 3s;
-  animation-timing-function: cubic-bezier(0.42, -0.3, 0, 1.57);
+  animation-timing-function: cubic-bezier(0.42, -0.3, 0, 1.1);
   transform-origin: center;
 }
 
@@ -371,14 +371,14 @@ h3 {
     animation-duration: 3s;
     animation-timing-function: linear;
     width: 38%;
-  height: 25%;
+  height: 30%;
   }
 
   #lightyearLeft {
     animation-duration: 3s;
     animation-timing-function: linear;
     width: 38%;
-  height: 25%;
+  height: 30%;
   }
 
   @keyframes roll_in_kf {

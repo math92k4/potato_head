@@ -75,7 +75,7 @@ function showPotato() {
 function showBtn() {
   document.querySelector("#character").classList.add("wiggle"); 
   document.querySelector("#button").classList.remove("hide"); 
-  setTimeout(flyRight, 2000); 
+  setTimeout(flyRight, 1500); 
 
 }
 
