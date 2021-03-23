@@ -4,6 +4,7 @@ export function toggleOptions(element) {
   //mobile open/close functionality
   document.querySelector("#icon").classList.toggle("x_icon");
   document.querySelector("#elements_container").classList.toggle("hide");
+  document.querySelector("#elements_container").classList.toggle("clicked");
 
   //gets datasets from selected element
   const option = element.dataset.name;
@@ -15,6 +16,8 @@ export function toggleOptions(element) {
 
   //checks if svg-part already have .show
   const isShown = checkClassList(potatoPart, "show");
+
+  toggleChosen(option, optionCategory);
 
   if (isShown) {
     removeThisOption(potatoPart);
@@ -32,6 +35,14 @@ function checkClassList(element, className) {
   } else {
     return element.classList.contains(className);
   }
+}
+
+function toggleChosen(name, type) {
+  const allParts = document.querySelectorAll(`#elements_container [data-type=${type}]`);
+  allParts.forEach(part => {
+    part.classList.remove("chosen");
+  });
+  document.querySelector(`#elements_container [data-name=${name}]`).classList.add("chosen");
 }
 
 function removeThisOption(potatoPart) {
