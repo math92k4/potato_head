@@ -107,6 +107,10 @@ h3 {
   color: black;
 }
 
+#configurator a {
+  text-decoration: none;
+}
+
 #configurator .category_btn {
   display: flex;
   align-items: center;
