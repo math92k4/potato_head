@@ -291,17 +291,21 @@ h3 {
 @keyframes animate_in {
   0% {
     transform: translate(calc(var(--diffX) * 1px), calc(var(--diffY) * 1px));
+    opacity: 0;
   }
   100% {
     transform: translate(0, 0);
+    opacity: 1;
   }
 }
 
 @keyframes animate_out {
   0% {
     transform: translate(0, 0);
+    opacity: 1;
   }
   100% {
     transform: translate(calc(var(--diffX) * 1px), calc(var(--diffY) * 1px));
+    opacity: 0;
   }
 }
