@@ -79,8 +79,19 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  /* Hide the scrollbar */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
   /* transition: 0.8s cubic-bezier(0.79, 0.14, 0.15, 0.86); */
 }
+
+/* Hide the scrollbar in Chrome, Safari, Opera */
+#configurator #elements_container::-webkit-scrollbar {
+  display: none;
+}
+
 
 #configurator #elements_container.hide {
   transform: translateX(100vw);
