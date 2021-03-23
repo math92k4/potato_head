@@ -82,26 +82,28 @@ function hasShadow(dataName) {
 //Add .show to clicked option
 function showOption(option) {
   const allParts = document.querySelectorAll(`#potato_parts [data-name=${option}]`);
-  hasShadow(option);
   allParts.forEach((part) => {
     part.classList.add("show");
   });
 }
 
+// Animate the chosen option
 function animateOption(option) {
-  const allParts = document.querySelectorAll(`#potato_parts [data-name=${option}]`);
-  allParts.forEach((part) => {
-    part.classList.remove("animate_out");
-    const start = document.querySelector(`#elements_container [data-name=${option}]`).getBoundingClientRect();
-    // Find the end position
-    const end = part.getBoundingClientRect();
-    // Translate the element to the start position
-    const diffX = start.x - end.x;
-    const diffY = start.y - end.y;
-    part.style.setProperty("--diffX", diffX);
-    part.style.setProperty("--diffY", diffY);
+  const part = document.querySelector(`#potato_parts [data-name=${option}]`);
+  part.classList.remove("animate_out");
 
-    // Animate the element
-    part.classList.add("animate_in");
-  });
+  const start = document.querySelector(`#elements_container [data-name=${option}]`).getBoundingClientRect();
+  const end = part.getBoundingClientRect();
+
+  const diffX = start.x - end.x;
+  const diffY = start.y - end.y;
+  part.style.setProperty("--diffX", diffX);
+  part.style.setProperty("--diffY", diffY);
+
+  part.classList.add("animate_in");
+  part.addEventListener("animationend", animationEnd);
+  function animationEnd() {
+    part.removeEventListener("animationend", animationEnd);
+    hasShadow(option);
+  }
 }
