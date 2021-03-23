@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "peace_sansregular";
+  src: url("fonts/peace_sans_webfont-webfont.woff2") format("woff2"), url("fonts/peace_sans_webfont-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /*
  *
  *
@@ -16,6 +23,13 @@ h3 {
 
 h3 {
   font-size: 1.5rem;
+  text-transform: uppercase;
+  font-family: "peace_sansregular";
+  -webkit-text-stroke: 1.5px #0059ad;
+  background: -webkit-linear-gradient(90deg, rgba(255, 222, 128, 1) 35%, rgba(255, 201, 49, 1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /*
@@ -73,7 +87,7 @@ h3 {
   top: 5vw;
   right: 5vw;
   padding: 5vw 5vw 0;
-  background-color: white;
+  background-color: #efefef;
   border-radius: 30px;
   transition: 1s cubic-bezier(0.8, -0.25, 0.15, 1.25);
   display: flex;
@@ -99,23 +113,30 @@ h3 {
 
 #configurator #button_container {
   width: 100%;
+  height: 130px;
   display: flex;
   justify-content: center;
   align-self: flex-end;
   margin-bottom: 1rem;
+  background-image: url(imgs/button_bg.svg);
+  /* background-size: cover; */
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #configurator #scroll_p_btn {
   text-align: center;
-  border-radius: 20px;
-  border: solid 2px black;
-  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 1rem 6rem;
   cursor: pointer;
   color: black;
+}
+
+#scroll_p_btn h3 {
+  -webkit-text-stroke: transparent;
 }
 
 #configurator a {
@@ -149,7 +170,7 @@ h3 {
   height: 0px;
   overflow: hidden;
   transition: all 1s cubic-bezier(0.86, 0, 0.07, 1);
-  border-bottom: 3px solid #151515;
+  border-bottom: 3px dashed #e40425;
 }
 
 #configurator .dropdown p {
@@ -170,8 +191,17 @@ h3 {
 
 #configurator .options img {
   width: 20vw;
-  border: 1px solid black;
+  border-radius: 1rem;
+  border: 2px solid #0059ad;
   margin-right: 10vw;
+}
+
+#configurator .options img:hover {
+  border-color:rgba(255, 201, 49, 1);
+}
+
+#configurator .options img.chosen {
+  border: 3px solid rgba(255, 201, 49, 1);
 }
 
 /* color selector */
@@ -212,13 +242,8 @@ h3 {
     bottom: 0;
   }
 
-  #toggle_options_menu #icon {
-    display: none;
-  }
-
   #configurator #toggle_options_menu {
-    top: 3vw;
-    right: 7vw;
+    display:none;
   }
 
   #configurator #elements_container {
