@@ -91,6 +91,99 @@
   height: 100vh;
 }
 
+#small_buzz img {
+  width: 20vw;
+  animation-name: kf_buzz_vertical;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+#small_buzz {
+  position: absolute;
+
+  top: 20vh;
+  left: -20vw;
+
+  animation-name: kf_buzz_lr;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes kf_buzz_vertical {
+  0% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  25% {
+    transform: translateY(2vh);
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  75% {
+    transform: translateY(-2vh);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes kf_buzz_lr {
+  0% {
+    transform: translateX(0);
+  }
+
+  10% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(120vw);
+  }
+  100% {
+    transform: translateX(120vw);
+  }
+}
+
+#big_buzz {
+  position: absolute;
+
+  top: 20vh;
+  right: -40vw;
+
+  animation-name: kf_buzz_rl;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+#big_buzz img {
+  width: 40vw;
+  animation-name: kf_buzz_vertical;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes kf_buzz_rl {
+  0% {
+    transform: translateX(0);
+  }
+
+  60% {
+    transform: translateX(0vw);
+  }
+  90% {
+    transform: translateX(-140vw);
+  }
+
+  100% {
+    transform: translateX(-140vw);
+  }
+}
+
 #scroll #potato_svg {
   position: absolute;
   width: 90vw;

@@ -61,13 +61,13 @@ export function srollingAniSetup() {
   //PotatoHead
 
   gsap.to(potatoHead, {
-    y: "-110vh",
+    y: "-130vh",
     ease: "easeOut",
     scrollTrigger: { trigger: "#scroll_block1", scrub: true },
   });
 
   gsap.to("#character", {
-    y: "200vh",
+    y: "250vh",
     ease: "Power1.easeIn",
     scrollTrigger: { trigger: "#scroll_block3", scrub: true },
   });
