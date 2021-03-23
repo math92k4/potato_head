@@ -41,25 +41,63 @@ export function srollingAniSetup() {
   gsap.to(frontCloud, {
     x: "400vw",
     scale: 4,
+    ease: "none",
     scrollTrigger: { trigger: "#scroll_block1", scrub: true, end: "bottom" },
   });
 
   gsap.to(middleCloud, {
     x: "-150vw",
     scale: 2,
-    scrollTrigger: { trigger: "#scroll_block1", scrub: true, markers: true },
+    ease: "none",
+    scrollTrigger: { trigger: "#scroll_block1", scrub: true },
   });
 
   gsap.to(backCloud, {
     x: "-20vw",
-    scrollTrigger: { trigger: "#scroll_block1", scrub: true },
+    ease: "none",
+    scrollTrigger: { trigger: "#scroll_block1to3", scrub: true },
   });
 
   //PotatoHead
 
   gsap.to(potatoHead, {
-    y: "-105vh",
-    ease: "elastic.out(1, 1)",
-    scrollTrigger: { trigger: "#scroll_block1", scrub: true, start: "top 50%" },
+    y: "-110vh",
+    ease: "easeOut",
+    scrollTrigger: { trigger: "#scroll_block1", scrub: true },
   });
+
+  gsap.to("#character", {
+    y: "200vh",
+    ease: "Power1.easeIn",
+    scrollTrigger: { trigger: "#scroll_block3", scrub: true },
+  });
+
+  gsap.to(potatoHead, {
+    rotate: "100deg",
+    ease: "none",
+    scrollTrigger: { trigger: "#scroll_block1and2", scrub: true },
+  });
+
+  const shownParts = document.querySelectorAll("#character .show");
+  shownParts.forEach((part) => {
+    gsap.to(part, {
+      opacity: 0,
+      scrollTrigger: { trigger: "#scroll_block1to3", scrub: true, markers: true, start: "top 0%", end: "bottom 100%" },
+    });
+  });
+
+  setTimeout(setUpScrollRedirect, 200);
+}
+
+function setUpScrollRedirect() {
+  const scrollTrigger = document.querySelector("#scroll_block3");
+  const observer = new IntersectionObserver(lastBlockObserved, { threshold: 0.99 });
+  observer.observe(scrollTrigger);
+}
+
+function lastBlockObserved(event) {
+  if (event[0].isIntersecting) {
+    console.log("hej");
+    window.location.href = "configurator.html";
+  }
 }
