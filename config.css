@@ -108,7 +108,7 @@ h3 {
   padding: 5vw 5vw 0;
   background-color: #efefef;
   border-radius: 30px;
-  box-shadow: 3px 3px 5px rgba(0,0,0,.5);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
   transition: 1s cubic-bezier(0.8, -0.25, 0.15, 1.25);
   display: flex;
   flex-direction: column;
@@ -126,9 +126,15 @@ h3 {
   display: none;
 }
 
-
 #configurator #elements_container.hide {
   transform: translateX(100vw);
+}
+
+#configurator #button_centering {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
 }
 
 #configurator #button_container {
@@ -234,7 +240,7 @@ h3 {
 }
 
 #configurator .options img:hover {
-  border-color:rgba(255, 201, 49, 1);
+  border-color: rgba(255, 201, 49, 1);
 }
 
 #configurator .options img.chosen {
@@ -250,7 +256,7 @@ h3 {
   top: 0;
   left: 0;
   display: none;
-  background-color: rgba(0,0,0,.5);
+  background-color: rgba(0, 0, 0, 0.5);
 
   z-index: 10;
 }
@@ -265,7 +271,7 @@ h3 {
   padding: 2.5vw 2.5vw;
   background-color: #efefef;
   border-radius: 30px;
-  box-shadow: 3px 3px 5px rgba(0,0,0,.5);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 #configurator #colorselector {
@@ -290,7 +296,7 @@ h3 {
   }
 
   #configurator #toggle_options_menu {
-    display:none;
+    display: none;
   }
 
   #configurator #elements_container {
