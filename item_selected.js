@@ -38,11 +38,17 @@ function checkClassList(element, className) {
 }
 
 function toggleChosen(name, type) {
+  const chosenPart = document.querySelector(`#elements_container [data-name=${name}]`);
+  const isChosen = chosenPart.classList.contains("chosen");
+  console.log(isChosen);
   const allParts = document.querySelectorAll(`#elements_container [data-type=${type}]`);
-  allParts.forEach(part => {
+  allParts.forEach((part) => {
     part.classList.remove("chosen");
   });
-  document.querySelector(`#elements_container [data-name=${name}]`).classList.add("chosen");
+
+  if (!isChosen) {
+    chosenPart.classList.add("chosen");
+  }
 }
 
 function removeThisOption(potatoPart) {
@@ -79,9 +85,9 @@ function removePrevObtion(potatoCategory) {
 function hasShadow(dataName) {
   const shadow = document.querySelector(`#back_shadow [data-name=${dataName}]`);
   switch (dataName) {
-    case 'arms':
-    case 'mr_shoes':
-    case 'ms_shoes':
+    case "arms":
+    case "mr_shoes":
+    case "ms_shoes":
       shadow.classList.toggle("show");
       shadow.classList.toggle("hide");
       break;
