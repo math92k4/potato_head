@@ -196,7 +196,7 @@ h3 {
   height: 0px;
   overflow: hidden;
   transition: all 1s cubic-bezier(0.86, 0, 0.07, 1);
-  border-bottom: 3px dashed #e40425;
+  border-bottom: 3px solid #e40425;
 }
 
 #configurator .dropdown p {
