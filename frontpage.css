@@ -19,15 +19,15 @@ span {
 }
 
 body {
-  overflow: hidden;
+  overflow: hidden; 
 }
 
 section {
   background-image: url("imgs/background.jpeg");
   width: 100vw;
   height: 100vh;
-  max-width: 2000px;
   background-size: cover;
+  background-position: center bottom;
 }
 
 header {
@@ -122,12 +122,7 @@ h1 span {
 }
 
 #lightyearRight {
-  background-image: url(imgs/right_lightyear.png);
-  background-size: cover;
-  /* width: 30%;
-  height: 25%; */
-  width: 110%;
-  height: 30%;
+  width: 400px;
   animation-name: flying_right_kf;
   animation-iteration-count:initial; 
   animation-duration: 1.5s;
@@ -138,6 +133,7 @@ h1 span {
 #lightyearContainer {
   width: 100vw;
   height: 100vh;
+  overflow-y: hidden;
 }
 
 @keyframes flying_right_kf {
@@ -151,13 +147,7 @@ h1 span {
 }
 
 #lightyearLeft {
-  --iterations: 1; 
-  background-image: url(imgs/left_lightyear.png);
-  background-size: cover;
-  /* width: 30%;
-  height: 25%; */
-  width: 110%;
-  height: 30%;
+  width: 400px;
   animation-name: flying_left_kf;
   animation-iteration-count:1; 
   animation-duration: 1.5s;
@@ -226,13 +216,9 @@ h3 {
 /* POTATO HEAD */
 
 #frontpage #character {
-  background-image: url("imgs/main_body.png");
-  top: 20%;
+  top: 27%;
   position: absolute;
-  background-repeat: no-repeat;
-  max-width: 350px;
-  width: 350px;
-  height: 500px;
+  width: 250px;
   margin-top: 5vw;
 }
 
@@ -366,6 +352,9 @@ h3 {
   }
 
   #frontpage #character {
+    top: 23vh;
+  width: 280px;
+  margin-top: 5vw;
     animation-timing-function: cubic-bezier(0.42, -0.3, 0, 1.2);
     transform-origin: center;
   }
@@ -373,15 +362,13 @@ h3 {
   #lightyearRight {
     animation-duration: 3s;
     animation-timing-function: linear;
-    width: 38%;
-  height: 30%;
+    width: 500px;
   }
 
   #lightyearLeft {
     animation-duration: 3s;
     animation-timing-function: linear;
-    width: 38%;
-  height: 30%;
+    width: 500px;
   }
 
   @keyframes roll_in_kf {
