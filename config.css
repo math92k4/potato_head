@@ -150,6 +150,31 @@ h3 {
   background-repeat: no-repeat;
   background-position: center;
 }
+#configurator #button_container:hover {
+  animation-name: kf_puff;
+  animation-duration: 0.7s;
+}
+
+@keyframes kf_puff {
+  0% {
+    transform: scale(1);
+    animation-timing-function: ease-in-out;
+  }
+  5% {
+    transform: scale(1.1) rotate(4deg);
+    animation-timing-function: ease-in-out;
+  }
+
+  20% {
+    transform: scale(1) rotate(0deg);
+    animation-timing-function: ease-in-out;
+  }
+
+  35% {
+    transform: scale(1.05) rotate(-3deg);
+    animation-timing-function: ease-in-out;
+  }
+}
 
 #configurator #scroll_p_btn {
   text-align: center;
