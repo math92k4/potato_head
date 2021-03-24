@@ -41,7 +41,6 @@ header {
 /*  */
 
 h1 span {
-  /* font-family: "sigmar_oneregular"; */
   text-transform: uppercase;
   font-family: "peace_sansregular";
   font-size: 2.5rem;
@@ -199,13 +198,6 @@ h3 {
   -webkit-text-fill-color: transparent;
 }
 
-@font-face {
-  font-family: "sigmar_oneregular";
-  src: url("webfontkit-20210319-045951/sigmarone-regular-webfont.woff2") format("woff2"),
-    url("webfontkit-20210319-045951/sigmarone-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 
 #container {
   width: 100vw;
