@@ -1,9 +1,13 @@
 "use strict";
 
 export function optionsMenuSetUp() {
-  const allDropdowns = document.querySelectorAll(".dropdown");
-  allDropdowns.forEach(setInnerHeightProperty);
-  const allOptions = document.querySelectorAll(`.options`);
+  setInnerHeightProperty();
+
+  window.addEventListener("resize", () => {
+    setTimeout(setInnerHeightProperty, 1000);
+  });
+
+  const allOptions = document.querySelectorAll(".option");
   allOptions.forEach(setOverflowX);
 
   document.querySelector("#toggle_options_menu").addEventListener("click", toggleOptionsMenu);
@@ -19,12 +23,14 @@ export function optionsMenuSetUp() {
  *
  * setInnerHeightProperty
  */
-function setInnerHeightProperty(dropdown) {
-  const pHeight = dropdown.querySelector("p").offsetHeight;
-  const optionsHeigt = dropdown.querySelector(".options").offsetHeight;
-  const height = pHeight + optionsHeigt + "px";
-
-  dropdown.style.setProperty("--height_on_show", height);
+function setInnerHeightProperty() {
+  const allDropdowns = document.querySelectorAll(".dropdown");
+  allDropdowns.forEach((dropdown) => {
+    const pHeight = dropdown.querySelector("p").offsetHeight;
+    const optionsHeigt = dropdown.querySelector(".options").offsetHeight;
+    const height = pHeight + optionsHeigt + "px";
+    dropdown.style.setProperty("--height_on_show", height);
+  });
 }
 
 /*
@@ -49,7 +55,8 @@ function setOverflowX(option) {
 function toggleOptionsMenu() {
   this.querySelector("#icon").classList.toggle("x_icon");
   document.querySelector("#elements_container").classList.toggle("hide");
-  console.log("works");
+
+  setInnerHeightProperty();
 }
 
 /*
