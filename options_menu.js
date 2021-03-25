@@ -55,8 +55,6 @@ function setOverflowX(option) {
 function toggleOptionsMenu() {
   this.querySelector("#icon").classList.toggle("x_icon");
   document.querySelector("#elements_container").classList.toggle("hide");
-
-  setInnerHeightProperty();
 }
 
 /*
@@ -65,6 +63,8 @@ function toggleOptionsMenu() {
  * catergoryClicked
  */
 function catergoryClicked() {
+  setInnerHeightProperty();
+
   const selectedDropdown = this.nextElementSibling;
   const selectedArrow = this.querySelector(".arrow");
   const alredyShown = checkClassList(selectedDropdown, "show");
