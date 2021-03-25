@@ -82,7 +82,7 @@ export function srollingAniSetup() {
   shownParts.forEach((part) => {
     gsap.to(part, {
       opacity: 0,
-      scrollTrigger: { trigger: "#scroll_block1to3", scrub: true, markers: true, start: "top 0%", end: "bottom 100%" },
+      scrollTrigger: { trigger: "#scroll_block1to3", scrub: true, start: "top 0%", end: "bottom 100%" },
     });
   });
 
