@@ -310,6 +310,8 @@ h3 {
   height: 40px;
   background-color: var(--color);
   cursor: pointer;
+  border: 1px solid #0059ad;
+  border-radius: 10px;
 }
 
 @media screen and (min-width: 768px) {
